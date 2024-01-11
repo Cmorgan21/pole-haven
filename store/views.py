@@ -5,4 +5,4 @@ from .models import Item
 
 def item_list(request):
     Items = Item.objects.all()
-    return render(request, "store/home.html", {"Items":Items})
+    return render(request, "store/home.html", {"items":Items})

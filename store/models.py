@@ -2,13 +2,19 @@ from django.db import models
 from django.conf import settings
 
 # Create your models here.
+ITEM_CATEGORY = (
+    ('CL', 'Clothes'),
+    ('GR', 'Grip'),
+    ('ACC', 'Accessories')
+)
 
 class Item(models.Model):
     title = models.CharField(max_length=100)
     price = models.FloatField()
+    category = models.CharField(choices=ITEM_CATEGORY, max_length=3)
 
     def __str__(self):
-        return self.title
+        return f"£{self.title}"
 
 class OrderItem(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
