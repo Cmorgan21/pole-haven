@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 ITEM_CATEGORY = (
@@ -12,9 +14,11 @@ class Item(models.Model):
     title = models.CharField(max_length=100)
     price = models.FloatField()
     category = models.CharField(choices=ITEM_CATEGORY, max_length=3)
+    item_description = models.TextField(blank=True)
+    featured_image = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
-        return f"£{self.title}"
+        return self.title
 
 class OrderItem(models.Model):
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
