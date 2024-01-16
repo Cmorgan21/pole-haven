@@ -11,3 +11,5 @@ def item_list(request):
 def item_detail(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     return render(request, 'store/item_detail.html', {'item': item})
+
+def add_to_cart(request, slug)

@@ -12,7 +12,9 @@ ITEM_CATEGORY = (
 
 class Item(models.Model):
     title = models.CharField(max_length=100)
+    slug = models.SlugField()
     price = models.FloatField()
+    discount_price = models.FloatField(blank=True, null=True)
     category = models.CharField(choices=ITEM_CATEGORY, max_length=3)
     item_description = models.TextField(blank=True)
     featured_image = CloudinaryField('image', default='placeholder')
@@ -21,7 +23,10 @@ class Item(models.Model):
         return self.title
 
 class OrderItem(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    ordered = models.BooleanField(default=False)
+    quantity = models.IntegerField(default=1)
 
     def __str__(self):
         return self.title
