@@ -22,14 +22,14 @@
               <th scope="row">{{ forloop.counter }}</th>
               <td>{{ order_item.item.title }}</td>
               <td>{{ order_item.quantity }}</td>
-              <td>${{ order_item.get_final_price }}</td>
+              <td>£{{ order_item.get_final_price }}</td>
             </tr>
           {% endfor %}
         {% endfor %}
       </tbody>
     </table>
 
-    <p>Total: ${{ total_price }}</p>
+    <p>Total: £{{ total_price }}</p>
   {% else %}
     <p>No orders found.</p>
   {% endif %}
