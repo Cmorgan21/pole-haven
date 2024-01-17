@@ -19,7 +19,12 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            {% if item.discount_price %}
+                            <span class="text-decoration-line-through">£{{ item.price }}</span>
+                            <p class="text-center">£{{ item.discount_price }}</p>
+                            {% else %}
                             <p class="text-center">£{{ item.price }}</p>
+                            {% endif %}
                         </div>
                         <a class="btn btn-outline-dark" href="{% url 'store:item_detail' slug=item.slug %}">
                             View Item

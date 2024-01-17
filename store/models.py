@@ -52,6 +52,8 @@ class OrderItem(models.Model):
         return f"{self.quantity} of {self.item.title}"  
 
     def get_final_price(self):
+        if self.item.discount_price:
+            return self.quantity * self.item.discount_price
         return self.quantity * self.item.price
  
 

@@ -43,12 +43,18 @@
                 </ul>
                 {% if user.is_authenticated %}
                 <p class="m-sm-2"> Welcome {{ user }}</p>
-                {% endif %}
                     <a class="btn btn-outline-dark" href="{% url 'store:order-summary' %}">
                         <i class="bi-cart-fill me-1"></i>
                         Cart
                         <span class="badge bg-dark text-white ms-1 rounded-pill">{{ request.user|cart_item_count }}</span>
                     </a>
+                {% else %}
+                <a class="btn btn-outline-dark" href="{% url 'account_login' %}">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                </a>
+                {% endif %}
             </div>
         </div>
     </nav>
