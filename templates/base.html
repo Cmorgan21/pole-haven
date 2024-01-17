@@ -1,4 +1,5 @@
 {% load static %}
+{% load cart_template_tags %}
 
 {% url 'home' as home_url %}
 {% url 'account_login' as login_url %}
@@ -46,7 +47,7 @@
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">{{ request.user|cart_item_count }}</span>
                     </button>
                 </form>
             </div>
