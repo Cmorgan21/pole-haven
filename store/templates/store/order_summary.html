@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Order Summary{% endblock %}
+
+{% block content %}
+  <h1>Order Summary</h1>
+
+  {% if orders %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Item</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in orders %}
+          {% for order_item in order.items.all %}
+            <tr>
+              <th scope="row">{{ forloop.counter }}</th>
+              <td>{{ order_item.item.title }}</td>
+              <td>{{ order_item.quantity }}</td>
+              <td>${{ order_item.get_final_price }}</td>
+            </tr>
+          {% endfor %}
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <p>Total: ${{ total_price }}</p>
+  {% else %}
+    <p>No orders found.</p>
+  {% endif %}
+{% endblock %}

@@ -5,6 +5,7 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'order_summary' as order_summary %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,11 +45,11 @@
                 <p class="m-sm-2"> Welcome {{ user }}</p>
                 {% endif %}
                 <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
+                    <a class="btn btn-outline-dark" href="{% url 'store:order-summary' %}">
                         <i class="bi-cart-fill me-1"></i>
                         Cart
                         <span class="badge bg-dark text-white ms-1 rounded-pill">{{ request.user|cart_item_count }}</span>
-                    </button>
+                    </a>
                 </form>
             </div>
         </div>

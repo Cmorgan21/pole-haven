@@ -45,7 +45,11 @@ class OrderItem(models.Model):
     quantity = models.IntegerField(default=1)
 
     def __str__(self):
-        return f"{self.quantity} of {self.item.title}"   
+        return f"{self.quantity} of {self.item.title}"  
+
+    def get_final_price(self):
+        return self.quantity * self.item.price
+ 
 
 class Order(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -56,4 +60,7 @@ class Order(models.Model):
 
     def __str__(self):
         return f"{self.user}'s {self.items}"
+    
+    def get_total(self):
+        return sum(item.get_final_price() for item in self.items.all())
 
