@@ -37,6 +37,10 @@ class Item(models.Model):
         return reverse("store:remove-from-cart", kwargs={
             'slug': self.slug
         })
+    
+    def get_category_display_name(self):
+        # Get the display name for the category
+        return dict(ITEM_CATEGORY)[self.category]
 
 class OrderItem(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
