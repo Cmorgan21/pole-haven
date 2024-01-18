@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views., name="about_page"),
+    path("", views.about, name="about-page"),
 
 
 ]
