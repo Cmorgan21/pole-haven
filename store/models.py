@@ -41,6 +41,9 @@ class Item(models.Model):
     def get_category_display_name(self):
         # Get the display name for the category
         return dict(ITEM_CATEGORY)[self.category]
+    
+    def __str__(self):
+        return f"Comment {self.title} | {self.category} | {self.item_description}"
 
 class OrderItem(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
