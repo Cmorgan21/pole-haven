@@ -68,7 +68,7 @@ class Order(models.Model):
     ordered = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.user}'s {self.items}"
+        return f"{self.user}'s order {self.ordered_date}"
     
     def get_total(self):
         return sum(item.get_final_price() for item in self.items.all())
