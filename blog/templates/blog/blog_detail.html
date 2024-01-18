@@ -28,9 +28,8 @@
             {% endif %}
             <div>
                 {% for comment in comments %}
-                <div class="p-2 comments
-                  {% if not comment.approved and comment.author == user %}
-                  faded{% elif not comment.approved %} d-none{% endif %}">
+                <div class="p-2 comments">
+                {% if comment.approved %}
                   <p class="font-weight-bold">
                     {{ comment.author }} commented:
                   </p>
@@ -39,7 +38,11 @@
                     {{ comment.created_on }}
                   </div>
                   <hr>
-                  {% if not comment.approved and comment.author == user %}
+                  {% elif not comment.approved and comment.author == user %}
+
+                  <div id="comment{{ comment.id }}" class="approval-text">
+                    {{ comment.body }} <br>
+                    {{ comment.created_on }}
                   <p class="approval">
                     This comment is awaiting approval
                   </p>
@@ -47,13 +50,12 @@
                 </div>
                 {% endfor %}
                 <div class="comment-form-container"></div>
-                    <div class="col-md-4 card mb-4 mt-3">
+                    <div class="col-md-4 card mb-4 mt-3 form-body">
                         <div class="card-body">
                         {% if user.is_authenticated %}
                         <h3>Leave a comment:</h3>
                         <p>Posting as: {{ user.username }}</p>
-                        <form id="commentForm" method="post"
-                            style="margin-top: 1.3em;">
+                        <form id="commentForm" method="post">
                             {{ comment_form | crispy }}
                             {% csrf_token %}
                             <button id="submitButton" type="submit"
