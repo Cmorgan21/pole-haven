@@ -18,6 +18,31 @@
             <p>{{ post.content | safe }}</p>
             <p>Created by {{ post.author }}<br> on {{ post.created_on }}</p>
         </div>
+        <hr>
+        <div class="comment-container">
+            <h4>{{ comment_count }} Comments:</h4>
+            <div>
+                {% for comment in comments %}
+                <div class="p-2 comments
+                  {% if not comment.approved and comment.author == user %}
+                  faded{% elif not comment.approved %} d-none{% endif %}">
+                  <p class="font-weight-bold">
+                    {{ comment.author }} commented:
+                  </p>
+                  <div id="comment{{ comment.id }}">
+                    {{ comment.body }} <br>
+                    {{ comment.created_on }}
+                  </div>
+                  <hr>
+                  {% if not comment.approved and comment.author == user %}
+                  <p class="approval">
+                    This comment is awaiting approval
+                  </p>
+                  {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
 
