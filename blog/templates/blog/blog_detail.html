@@ -4,4 +4,24 @@
 {% block header %}
 {% endblock header %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog_styles.css' %}">
+<div class="container">
+    <div class="img-container">
+        <img class="blog-image" src="{% if 'placeholder' in post.featured_image.url %}{% static 'images/default.jpg' %}{% else %}{{ post.featured_image.url }}{% endif %}" alt="..." />
+    </div>
+    <div class="content-container">
+        <div class="title-container">
+            <h1>{{ post.title }}</h1>
+        </div>
+        <hr>
+        <div>
+            <p>{{ post.content | safe }}</p>
+            <p>Created by {{ post.author }}<br> on {{ post.created_on }}</p>
+        </div>
+    </div>
+
+
+
+</div>
+
 {% endblock %}
