@@ -78,3 +78,7 @@ def order_summary(request):
 
     return render(request, 'store/order_summary.html', {'orders': orders,
         'total_price': total_price,} )
+
+def store_view(request):
+    # Your existing code for categories_view
+    return render(request, 'store/online_store.html')
