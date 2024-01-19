@@ -1,0 +1,12 @@
+.logo-image {
+    height: 100px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-title {
+}
