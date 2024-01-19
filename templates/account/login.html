@@ -11,26 +11,25 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
 
-<div class="form-container">
-    <div class="form-header">
-        <img class="logo-image" src="{% static 'images/pole-haven-logo.png' %}" alt="placeholder image">
-        <h3 class="form-title">{% trans "Sign In" %}</h3>
+<section class="form-section">
+    <div class="form-container">
+        <div class="form-header">
+            <img class="logo-image" src="{% static 'images/pole-haven-logo.png' %}" alt="placeholder image">
+            <h3 class="form-title">{% trans "Login" %}</h3>
+        </div>
+        <div class="form-paragraph">
+            <p>{% blocktrans %} Welcome back to Pole Haven! Please Login Below. Not got an account? Click here to <a class="link" href="{{ signup_url }}">sign up</a>.{% endblocktrans %}</p>
+        </div>
+        <div class="form">
+            <form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <button class="form-button" type="submit">{% trans "Sign In" %}</button>
+            </form>
+        </div>
     </div>
-    <div class="form-paragraph">
-        <p>{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If
-            you
-            have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-            first.{% endblocktrans %}</p>
-    </div>
-    <div class="form">
-        <form class="login" method="POST" action="{% url 'account_login' %}">
-            {% csrf_token %}
-            {{ form.as_p }}
-            {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-            {% endif %}
-            <button class="" type="submit">{% trans "Sign In" %}</button>
-        </form>
-    </div>
-</div>
+</section>
 {% endblock %}
