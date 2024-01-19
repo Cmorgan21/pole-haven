@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.utils import timezone
-from .models import Item, Order, OrderItem
+from .models import Item, Order, OrderItem, ITEM_CATEGORY
 
 
 # Create your views here.
@@ -80,5 +80,13 @@ def order_summary(request):
         'total_price': total_price,} )
 
 def store_view(request):
-    Items = Item.objects.all()
-    return render(request, 'store/online_store.html', {"items":Items})
+    category_filter = request.GET.get('category')
+    items = Item.objects.all()
+
+    # Include ITEM_CATEGORY in the context
+    categories = ITEM_CATEGORY
+
+    if category_filter:
+        items = items.filter(category=category_filter)
+
+    return render(request, 'store/online_store.html', {'items': items, 'categories': categories})

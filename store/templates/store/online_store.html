@@ -9,7 +9,25 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/online_store.css' %}">
 
+<section>
+    <div class="category-container">
+        <h2>Haven Store</h2>
+        <form method="get" action="{% url 'store:online-store' %}">
+            <label for="category">Filter by Category:</label>
+            <select name="category" id="category">
+                <option value="">All Categories</option>
+                {% for category_key, category_name in categories %}
+                    <option value="{{ category_key }}" {% if request.GET.category == category_key %}selected{% endif %}>{{ category_name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+    <hr>
+</section>
+
 <section class="py-5">
+    {% if items %}
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             {% for item in items %}
@@ -43,5 +61,8 @@
             {% endfor %}
         </div>
     </div>
+    {% else %}
+    <p class="text-center">No items within this category.</p>
+{% endif %}
 </section>
 {% endblock %}
