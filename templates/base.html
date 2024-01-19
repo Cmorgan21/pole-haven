@@ -2,7 +2,7 @@
 {% load cart_count_tags %}
 
 {% url 'home' as home_url %}
-{% url 'about-page' as about-url %}
+{% url 'about-page' as about_url %}
 {% url 'blog-page' as blog_url %}
 {% url 'online-store' as store_url %}
 {% url 'account_login' as login_url %}
@@ -26,15 +26,15 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'store:home' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about-page' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="{% url 'blog-page' %}">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="{% url 'store:online-store' %}">Store</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == home_url %} active {% endif %}" aria-current="page" href="{% url 'store:home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == about_url %} active {% endif %}" aria-current="page" href="{% url 'about-page' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == blog_url %} active {% endif %}" aria-current="page" href="{% url 'blog-page' %}">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == store_url %} active {% endif %}" aria-current="page" href="{% url 'store:online-store' %}">Store</a></li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Log Out</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == logout_url %} active {% endif %}" href="{% url 'account_logout' %}">Log Out</a></li>
                     {% else %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Log In</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == login_url %} active {% endif %}" href="{% url 'account_login' %}">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == signup_url %} active {% endif %}" href="{% url 'account_signup' %}">Sign Up</a></li>
                     {% endif %}
                 </ul>
                 {% if user.is_authenticated %}
