@@ -8,7 +8,7 @@
 {% block content %}
 <section>
     <div class="text-center">
-        <h2>Haven Store</h2>
+        <h2>Pole Haven Blog</h2>
     </div>
 </section>
 
@@ -29,11 +29,10 @@
                                     {% endif %}
                                 </div>
                                 <a href="{% url 'blog_details' post.slug %}" class="post-link">
-                                    <h2 class="">{{ post.title }}</h2>
-                                    <p class="">{{ post.excerpt }}</p>
+                                    <h3>{{ post.title }}</h3>
                                 </a>
                                 <hr />
-                                <p class=" text-muted h6">{{ post.created_on}}</p>
+                                <p class="text-muted h6">{{ post.created_on}}</p>
                             </div>
                         </div>
                     </div>
