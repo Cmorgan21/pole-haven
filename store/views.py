@@ -12,8 +12,10 @@ def item_list(request):
 
 
 def item_detail(request, slug):
+
     item = get_object_or_404(Item, slug=slug)
-    return render(request, 'store/item_detail.html', {'item': item})
+    related_items = Item.objects.filter(category=item.category).exclude(slug=item.slug).order_by('?')[:4]
+    return render(request, 'store/item_detail.html', {'item': item, 'related_items': related_items})
 
 def add_to_cart(request, slug):
     item = get_object_or_404(Item, slug=slug)
