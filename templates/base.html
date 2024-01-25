@@ -71,12 +71,48 @@
 
     {% endblock %}
     <footer class="py-5 bg-dark">
-        <div class="container footer"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 text-center">
+                    <p class="m-0 text-white">Quick Links</p>
+                    <div class="d-flex flex-column">
+                        <a class="nav-link text-white {% if request.path == home_url %} active {% endif %}" aria-current="page" href="{% url 'store:home' %}">Home</a>
+                        <a class="nav-link text-white {% if request.path == about_url %} active {% endif %}" aria-current="page" href="{% url 'about-page' %}">About</a>
+                        <a class="nav-link text-white {% if request.path == blog_url %} active {% endif %}" aria-current="page" href="{% url 'blog-page' %}">Blog</a>
+                        <a class="nav-link text-white {% if request.path == store_url %} active {% endif %}" aria-current="page" href="{% url 'store:online-store' %}">Store</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 text-center">
+                    <p class="m-0 text-white">Pole Haven</p>
+                    <p class="text-white">Your pole retailer and blog website</p>
+                    <p>
+                        <a class="text-white" href="">Subscribe to our newsletter</a>
+                    </p>
+                </div>
+                
+                <div class="col-md-4 mb-3 text-center">
+                    <p class="m-0 text-white">Contact Us</p>
+                    <p class="text-white">polehaven@gmail.com</p>
+                    <p>
+                        <a class="text-white" href="https://www.linkedin.com/in/callum-morgan-8859a1254/" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <br>
+                        <a class="text-white" href="https://github.com/Cmorgan21" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/31c8bbd3c8.js" crossorigin="anonymous"></script>
 
     
 </body>
