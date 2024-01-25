@@ -39,18 +39,25 @@
                 </ul>
                 {% if user.is_authenticated %}
                 <p class="m-sm-2"> Welcome {{ user }}</p>
-                    <a class="btn btn-outline-dark" href="{% url 'store:order-summary' %}">
-                        <i class="bi-cart-fill me-1"></i>
+                <a class="btn btn-outline-dark" href="{% url 'store:order-summary' %}">
+                    {% if request.user|cart_item_count %}
                         Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">{{ request.user|cart_item_count }}</span>
-                    </a>
-                {% else %}
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">
+                            {{ request.user|cart_item_count }}
+                        </span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    {% else %}
+                        Empty Cart
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    {% endif %}
+                </a>
+            {% else %}
                 <a class="btn btn-outline-dark" href="{% url 'account_login' %}">
                     <i class="bi-cart-fill me-1"></i>
                     Cart
-                    <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </a>
-                {% endif %}
+            {% endif %}
             </div>
         </div>
     </nav>
