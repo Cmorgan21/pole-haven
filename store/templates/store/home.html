@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/online-store.css' %}">
+{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/online_store.css' %}">
 <section class="py-5">
     <h2 class="text-center">Explore Our Latest Arrivals</h2>
     <hr class="mb-4">
