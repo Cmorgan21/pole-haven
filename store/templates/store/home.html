@@ -4,6 +4,8 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/online_store.css' %}">
 <section class="py-5">
+    <h2 class="text-center">Explore Our Latest Arrivals</h2>
+    <hr class="mb-4">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             {% for item in items %}
@@ -23,7 +25,7 @@
                         {% if item.discount_price %}
                             <span class="text-decoration-line-through">£{{ item.price }}</span> <span>£{{ item.discount_price }}</span>
                         {% else %}
-                            <p class="text-center">£{{ item.price }}</p>
+                            <span class="text-center">£{{ item.price }}</span>
                         {% endif %}
                     </div>
                     <a class="btn btn-outline-dark" href="{% url 'store:item_detail' slug=item.slug %}">
@@ -38,10 +40,11 @@
 
 
 <section class="py-5 bg-light text-center">
+    <h2>What we do </h2>
+    <hr>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h2>What we do </h2>
                 <h3>The Haven Store <i class="fa-solid fa-bag-shopping"></i></h3>
                 <p>Pole Haven is dedicated to being one of the biggest wholesale retailers for all your favorite brands! This includes clothes, grips, and many accessories that will accompany you on your pole journey<br>
                     Being a small and independent business. Our biggest priority is customer satisfaction and ensuring all customers get their pole items that ensure them a better pole journey.
