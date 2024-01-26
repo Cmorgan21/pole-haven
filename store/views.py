@@ -2,13 +2,15 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.utils import timezone
 from .models import Item, Order, OrderItem, ITEM_CATEGORY
+from blog.models import Post
 
 
 # Create your views here.
 
 def item_list(request):
+    latest_blog_posts = Post.objects.filter(status=1).order_by('-created_on')[:3] 
     Items = Item.objects.all()
-    return render(request, "store/home.html", {"items":Items})
+    return render(request, "store/home.html", {"items":Items,'latest_blog_posts': latest_blog_posts})
 
 
 def item_detail(request, slug):
