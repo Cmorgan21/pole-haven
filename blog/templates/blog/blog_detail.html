@@ -2,11 +2,13 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog-styles.css' %}">
+{% endblock %}
 {% block header %}
 {% endblock header %}
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/blog_styles.css' %}">
-<div class="container">
+<div class="blog-content-container">
     <div class="img-container">
         <img class="blog-image" src="{% if 'placeholder' in post.featured_image.url %}{% static 'images/default.jpg' %}{% else %}{{ post.featured_image.url }}{% endif %}" alt="..." />
     </div>
@@ -17,7 +19,7 @@
         <hr>
         <div>
             <p>{{ post.content | safe }}</p>
-            <p>Created by {{ post.author }}<br> on {{ post.created_on }}</p>
+            <p>Created by {{ post.author }} on {{ post.created_on }}</p>
         </div>
         <hr>
         <div class="comment-container">

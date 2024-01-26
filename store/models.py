@@ -62,7 +62,7 @@ class OrderItem(models.Model):
         if self.item.discount_price:
             return self.quantity * self.item.discount_price
         return self.quantity * self.item.price
- 
+    
 
 class Order(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
