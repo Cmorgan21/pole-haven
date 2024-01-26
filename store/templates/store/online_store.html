@@ -2,12 +2,14 @@
 {% load static %}
 
 {% block title %}Store{% endblock %}
+{% block links %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/online-store.css' %}">
+{% endblock %}
 
 {% block header %}
 {% endblock header %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/online_store.css' %}">
 
 <section>
     <div class="category-container">
@@ -50,7 +52,7 @@
                             {% if item.discount_price %}
                                 <span class="text-decoration-line-through">£{{ item.price }}</span> <span>£{{ item.discount_price }}</span>
                             {% else %}
-                                <p class="text-center">£{{ item.price }}</p>
+                                <span class="text-center">£{{ item.price }}</span>
                             {% endif %}
                         </div>
                         <a class="btn btn-outline-dark" href="{% url 'store:item_detail' slug=item.slug %}">

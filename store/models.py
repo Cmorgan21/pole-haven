@@ -42,6 +42,10 @@ class Item(models.Model):
         # Get the display name for the category
         return dict(ITEM_CATEGORY)[self.category]
     
+    def savings(self):
+        if self.discount_price:
+            return self.price - self.discount_price
+    
     def __str__(self):
         return f"Comment {self.title} | {self.category} | {self.item_description}"
 

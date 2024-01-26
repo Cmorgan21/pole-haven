@@ -56,6 +56,15 @@ p {
     color: #6c757d;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
 .blog-container {
     width: 100%;
 }
@@ -111,4 +120,12 @@ p {
     line-height: 1.6;
     color: #6c757d;
 
+}
+
+.basket-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100px;
 }
