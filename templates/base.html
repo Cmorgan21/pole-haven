@@ -9,6 +9,8 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 {% url 'order_summary' as order_summary %}
+{% url 'store:contact' as contact_url %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +34,7 @@
                     <li class="nav-item"><a class="nav-link {% if request.path == about_url %} active {% endif %}" aria-current="page" href="{% url 'about-page' %}">About</a></li>
                     <li class="nav-item"><a class="nav-link {% if request.path == blog_url %} active {% endif %}" aria-current="page" href="{% url 'blog-page' %}">Blog</a></li>
                     <li class="nav-item"><a class="nav-link {% if request.path == store_url %} active {% endif %}" aria-current="page" href="{% url 'store:online-store' %}">Store</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == contact_url %} active {% endif %}" aria-current="page" href="{% url 'store:contact' %}">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item"><a class="nav-link {% if request.path == logout_url %} active {% endif %}" href="{% url 'account_logout' %}">Log Out</a></li>
                     {% else %}

@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.utils import timezone
 from .models import Item, Order, OrderItem, ITEM_CATEGORY
 from blog.models import Post
+from .forms import ContactForm
+
 
 
 # Create your views here.
@@ -98,3 +100,15 @@ def store_view(request):
         items = items.filter(category=category_filter)
 
     return render(request, 'store/online_store.html', {'items': items, 'categories': categories})
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # Add any additional logic like sending an email or displaying a success message.
+            return redirect('contact_success')
+    else:
+        form = ContactForm()
+
+    return render(request, 'store/contact.html', {'form': form})    

@@ -10,5 +10,5 @@ urlpatterns = [
     path('remove-from-cart/<slug>/', views.remove_from_cart, name='remove-from-cart'),
     path('order-summary', views.order_summary, name='order-summary'),
     path('store/', views.store_view, name='online-store'),
-
+    path('contact/', views.contact, name='contact'),
 ]
