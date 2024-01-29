@@ -111,21 +111,25 @@ def contact(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
 
-            email_message = f"New Contact Form Submission\n\nName: {name}\nEmail: {email}\nSubject: {subject}\nMessage: {message}"
+            email_message = f"Pole Haven Support:\nName: {name}\nEmail: {email}\nSubject: {subject}\n\n{message}"
 
             send_mail(
-                'New Contact Form Submission',
+                'Pole Haven Contact Form',
                 email_message,
-                'your@example.com', 
+                'callummorgan666@gmail.com', 
                 [email],
                 fail_silently=False,
             )
 
             messages.success(request, 'Your message has been sent! We will get in touch with you shortly.')
 
-            return redirect('contact_success')
+            return redirect('store:contact_success')
 
     else:
         form = ContactForm()
 
     return render(request, 'store/contact.html', {'form': form})
+
+
+def contact_success(request):
+    return render(request, 'store/contact_success.html')
