@@ -19,9 +19,8 @@
 
 form {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 label {
@@ -145,4 +144,11 @@ a:hover {
     width: 100px;
     align-self: flex-start;
 
+}
+
+.quantity-form {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }

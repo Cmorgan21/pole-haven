@@ -31,7 +31,7 @@
                 <p class="lead">{{ item.item_description }}</p>
                 <div class="basket-button-container">
                     {% if user.is_authenticated %}
-                        <form method="POST" action="{% url 'store:add-to-cart' slug=item.slug %}">
+                        <form method="POST" class="quantity-form" action="{% url 'store:add-to-cart' slug=item.slug %}">
                             {% csrf_token %}
                             <label for="quantity">Quantity:</label>
                             <input type="number" name="quantity" value="1" min="1">
