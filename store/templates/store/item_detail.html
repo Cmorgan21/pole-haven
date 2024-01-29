@@ -18,76 +18,74 @@
                 <h1 class="display-5 fw-bolder">{{ item.title }}</h1>
                 <div class="fs-5 mb-5">
                     {% if item.discount_price %}
-                        <span class="text-decoration-line-through">Original Price: £{{ item.price }}</span>
-                        <br>
-                        <span>Discount Price: £{{ item.discount_price }}</span>
-                        <br>
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">Saving: £{{ item.savings }}</span>
+                    <span class="text-decoration-line-through">Original Price: £{{ item.price }}</span>
+                    <br>
+                    <span>Discount Price: £{{ item.discount_price }}</span>
+                    <br>
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">Saving: £{{ item.savings }}</span>
                     {% else %}
-                        <span>Price: £{{ item.price }}</span>
+                    <span>Price: £{{ item.price }}</span>
                     {% endif %}
                 </div>
                 <h2>Product Description</h2>
                 <p class="lead">{{ item.item_description }}</p>
                 <div class="basket-button-container">
                     {% if user.is_authenticated %}
-                        <form method="POST" class="quantity-form" action="{% url 'store:add-to-cart' slug=item.slug %}">
-                            {% csrf_token %}
-                            <label for="quantity">Quantity:</label>
-                            <input type="number" name="quantity" value="1" min="1">
-                            <button type="submit" class="btn btn-outline-dark">Add to cart</button>
-                        </form>
+                    <form method="POST" class="quantity-form" action="{% url 'store:add-to-cart' slug=item.slug %}">
+                        {% csrf_token %}
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" name="quantity" value="1" min="1">
+                        <button type="submit" class="btn btn-outline-dark">Add to cart</button>
+                    </form>
                     {% else %}
-                        <a class="btn btn-outline-dark" href="{% url 'account_login' %}">Add to cart</a>
+                    <a class="btn btn-outline-dark" href="{% url 'account_login' %}">Add to cart</a>
                     {% endif %}
+
                     {% if user.is_authenticated %}
-                        <a class="btn btn-outline-dark remove-button" href="{{ item.get_remove_from_cart_url }}">Remove from Cart</a>
+                    <a class="btn btn-outline-dark remove-button" href="{{ item.get_remove_from_cart_url }}">Remove from Cart</a>
                     {% else %}
-                        <a class="btn btn-outline-dark remove-button" href="{% url 'account_login' %}">Remove from Cart</a>
+                    <a class="btn btn-outline-dark remove-button" href="{% url 'account_login' %}">Remove from Cart</a>
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Related items section-->
 <section class="py-5 bg-light">
     <div class="container px-4 px-lg-5 mt-5">
         <h2 class="fw-bolder mb-4">Related products</h2>
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             {% for related_item in related_items %}
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="{{ related_item.featured_image.url }}" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">{{ related_item.title }}</h5>
-                                <!-- Product price-->
-                                {% if related_item.discount_price %}
-                                    <span class="text-decoration-line-through">£{{ related_item.price }}</span>
-                                    <span>£{{ related_item.discount_price }}</span>
-                                {% else %}
-                                    <span>£{{ related_item.price }}</span>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ related_item.get_absolute_url }}">View details</a></div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{ related_item.featured_image.url }}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{ related_item.title }}</h5>
+                            <!-- Product price-->
+                            {% if related_item.discount_price %}
+                            <span class="text-decoration-line-through">£{{ related_item.price }}</span>
+                            <span>£{{ related_item.discount_price }}</span>
+                            {% else %}
+                            <span>£{{ related_item.price }}</span>
+                            {% endif %}
                         </div>
                     </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ related_item.get_absolute_url }}">View details</a></div>
+                    </div>
                 </div>
+            </div>
             {% endfor %}
         </div>
     </div>
 </section>
-
-
 {% endblock %}
 
-{% block content %}
 
-{% endblock %}
