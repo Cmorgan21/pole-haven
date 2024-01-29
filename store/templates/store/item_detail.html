@@ -11,32 +11,39 @@
 <section class="py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ item.featured_image.url }}" alt="{{ item.title }}" /></div>
             <div class="col-md-6">
-            <h1 class="display-5 fw-bolder">{{ item.title }}</h1>
+                <img class="card-img-top mb-5 mb-md-0" src="{{ item.featured_image.url }}" alt="{{ item.title }}" />
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">{{ item.title }}</h1>
                 <div class="fs-5 mb-5">
                     {% if item.discount_price %}
-                    <span class="text-decoration-line-through">Original Price: £{{ item.price }}</span>
-                    <br>
-                    <span>Discount Price: £{{ item.discount_price }}</span>
-                    <br>
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">Saving: £{{ item.savings }}</span>
+                        <span class="text-decoration-line-through">Original Price: £{{ item.price }}</span>
+                        <br>
+                        <span>Discount Price: £{{ item.discount_price }}</span>
+                        <br>
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">Saving: £{{ item.savings }}</span>
                     {% else %}
-                    <span>Price: £{{ item.price }}</span>
+                        <span>Price: £{{ item.price }}</span>
                     {% endif %}
                 </div>
                 <h2>Product Description</h2>
                 <p class="lead">{{ item.item_description }}</p>
                 <div class="basket-button-container">
                     {% if user.is_authenticated %}
-                    <a class="btn btn-outline-dark" href="{{ item.get_add_to_cart_url }}">Add to cart</a>
+                        <form method="POST" action="{% url 'store:add-to-cart' slug=item.slug %}">
+                            {% csrf_token %}
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" name="quantity" value="1" min="1">
+                            <button type="submit" class="btn btn-outline-dark">Add to cart</button>
+                        </form>
                     {% else %}
-                    <a class="btn btn-outline-dark" href="{% url 'account_login' %}">Add to cart</a>
+                        <a class="btn btn-outline-dark" href="{% url 'account_login' %}">Add to cart</a>
                     {% endif %}
                     {% if user.is_authenticated %}
-                    <a class="btn btn-outline-dark" href="{{ item.get_remove_from_cart_url }}">Remove from Cart</a>
+                        <a class="btn btn-outline-dark remove-button" href="{{ item.get_remove_from_cart_url }}">Remove from Cart</a>
                     {% else %}
-                    <a class="btn btn-outline-dark" href="{% url 'account_login' %}">Remove from Cart</a>
+                        <a class="btn btn-outline-dark remove-button" href="{% url 'account_login' %}">Remove from Cart</a>
                     {% endif %}
                 </div>
             </div>

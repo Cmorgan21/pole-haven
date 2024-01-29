@@ -19,14 +19,23 @@
 
 form {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 label {
 
     color: #343a40;
     margin-right: 10px;
+    margin-bottom: 5px;
     font-weight: bold;
+}
+
+input {
+    width: 60px;
+    padding: 8px;
+    margin-bottom: 10px;
 }
 
 select {
@@ -125,7 +134,15 @@ a:hover {
 .basket-button-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: flex-start;
     width: 50%;
     height: 100px;
+
+    margin-bottom: 20px;
+}
+
+.remove-button {
+    width: 100px;
+    align-self: flex-start;
+
 }
