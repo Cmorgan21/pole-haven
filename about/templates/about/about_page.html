@@ -28,7 +28,8 @@
         <p>
             Whether you're a seasoned pole dancer or just starting, we invite you to be a part of the Pole Haven community. Explore our store, connect with us on social media, and share your pole journey with us. Let's dance together!
         </p>
-        <a href="#" class="cta-button">Explore Our Store</a>
+        <a href="{% url 'blog-page' %}" class="btn-outline-dark ">Explore Our Blog</a>
+        <a href="{% url 'store:online-store' %}" class="btn-outline-dark">Explore Our Store</a>
     </div>
 </section>
 {% endblock %}
