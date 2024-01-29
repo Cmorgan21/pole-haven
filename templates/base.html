@@ -27,9 +27,9 @@
 </head>
 <body>
      <!-- Navigation-->
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
-    <a class="navbar-brand" href="{% url 'store:home' %}">Pole Haven</a>
+            <a class="navbar-brand" href="{% url 'store:home' %}">Pole Haven</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -49,45 +49,48 @@
                 <p class="m-sm-2"> Welcome {{ user }}</p>
                 <a class="btn btn-outline-dark" href="{% url 'store:order-summary' %}">
                     {% if request.user|cart_item_count %}
-                        Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">
-                            {{ request.user|cart_item_count }}
-                        </span>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">
+                        {{ request.user|cart_item_count }}
+                    </span>
+                    <i class="fa-solid fa-cart-shopping"></i>
                     {% else %}
-                        Empty Cart
-                        <i class="fa-solid fa-cart-shopping"></i>
+                    Empty Cart
+                    <i class="fa-solid fa-cart-shopping"></i>
                     {% endif %}
                 </a>
-            {% else %}
+                {% else %}
                 <a class="btn btn-outline-dark" href="{% url 'account_login' %}">
                     <i class="bi-cart-fill me-1"></i>
                     Cart
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
-            {% endif %}
+                {% endif %}
             </div>
         </div>
     </nav>
-    <div id="messages-container" class="container-fluid">
-        {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                    <div class="alert alert-info text-center" role="alert">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </div>
+
+    <!-- Info Alert Messages -->
+    <section>
+        <div id="messages-container" class="container-fluid">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <div class="alert alert-info text-center" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </section>
     
     <!-- Header-->
     {% block header %}
     <header class="bg-dark py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Welcome to Pole Haven <br>
-                    Your Ultimate Pole Fitness Destination!</h1>
+                <h1 class="display-4 fw-bolder">Welcome to Pole Haven <br> Your Ultimate Pole Fitness Destination!</h1>
                 <p class="lead fw-normal text-white-50 mb-4">Explore a World of Possibilities in Pole Fitness</p>
                 <p class="lead fw-normal text-white-50 mb-4">Discover the Finest Selection of Pole Wear, Accessories, and More</p>
                 <p class="lead fw-normal text-white-50 mb-0">Unleash Your Strength and Style with Our Exclusive Collections</p>
@@ -97,7 +100,7 @@
     </header>
     {% endblock header %}
 
-    <!-- Section-->
+    <!-- Main content for pages -->
     {% block content %}
 
     {% endblock %}
@@ -138,14 +141,12 @@
             </div>
         </div>
     </footer>
+    <!-- Info Messaging Alert Script -->
     <script src="{% static 'js/messages.js' %}"></script>
     <!-- Javascript Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- Core theme JS-->
-    <script src="{% static 'js/scripts.js' %}"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/31c8bbd3c8.js" crossorigin="anonymous"></script>
 
-    
 </body>
 </html>
