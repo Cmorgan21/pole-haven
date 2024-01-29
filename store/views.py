@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.mail import send_mail
 from django.contrib import messages
 from django.utils import timezone
 from .models import Item, Order, OrderItem, ITEM_CATEGORY
@@ -105,10 +106,26 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            form.save()
-            # Add any additional logic like sending an email or displaying a success message.
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+
+            email_message = f"New Contact Form Submission\n\nName: {name}\nEmail: {email}\nSubject: {subject}\nMessage: {message}"
+
+            send_mail(
+                'New Contact Form Submission',
+                email_message,
+                'your@example.com', 
+                [email],
+                fail_silently=False,
+            )
+
+            messages.success(request, 'Your message has been sent! We will get in touch with you shortly.')
+
             return redirect('contact_success')
+
     else:
         form = ContactForm()
 
-    return render(request, 'store/contact.html', {'form': form})    
+    return render(request, 'store/contact.html', {'form': form})
