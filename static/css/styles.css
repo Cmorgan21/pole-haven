@@ -24,6 +24,16 @@
     margin: 10px 0; 
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 60px;
+
+}
+
 @media (max-width: 768px) {
     .alert {
         width: 100%; 
