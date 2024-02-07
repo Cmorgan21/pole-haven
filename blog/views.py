@@ -1,13 +1,10 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Comment
+from django.urls import reverse
 from django.views import generic
-from .forms import CommentForm
 from django.http import HttpResponseRedirect
 from django.contrib import messages
-from django.urls import reverse
-
-
-
+from .models import Post, Comment
+from .forms import CommentForm
 
 
 # Create your views here.
@@ -18,9 +15,10 @@ class PostList(generic.ListView):
     template_name = "blog/blog_page.html"
     paginate_by = 6
 
+
 def blog_details(request, slug):
     query = Post.objects.filter(status=1)
-    post= get_object_or_404(query, slug=slug)
+    post = get_object_or_404(query, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
     comment_form = CommentForm()
@@ -36,11 +34,7 @@ def blog_details(request, slug):
     return render(
         request,
         "blog/blog_detail.html",
-        {"post":post,
-        "comments": comments,
-        "comment_count": comment_count,
-        "comment_form": comment_form,}
-        )
+        {"post": post, "comments": comments, "comment_count": comment_count, "comment_form": comment_form})
 
 
 def comment_edit(request, slug, comment_id):
@@ -64,6 +58,7 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('blog_details', args=[slug]))
+
 
 def comment_delete(request, slug, comment_id):
     """
