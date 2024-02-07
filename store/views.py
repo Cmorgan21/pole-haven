@@ -84,6 +84,7 @@ def remove_from_cart(request, slug):
     else:
         messages.info(request, "You do not have an active order")
         return redirect("store:item_detail", slug=slug)
+    
 
 def order_summary(request):
     orders = Order.objects.filter(user=request.user, ordered=False)
