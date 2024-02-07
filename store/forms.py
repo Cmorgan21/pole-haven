@@ -1,5 +1,6 @@
 from django import forms
 
+
 class ContactForm(forms.Form):
     subject_choices = [
         ('general', 'General Inquiry'),
