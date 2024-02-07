@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 document.addEventListener('DOMContentLoaded', function () {
     var messagesContainer = document.getElementById('messages-container');
 

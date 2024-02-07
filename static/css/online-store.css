@@ -170,7 +170,7 @@ a:hover {
     }
 
     .blog-section .carousel-inner .carousel-item img {
-        max-height: auto;
+        height: auto;
     }
 
     #blogCarousel {
