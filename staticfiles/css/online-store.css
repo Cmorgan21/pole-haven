@@ -1,0 +1,250 @@
+.card {
+    width: 100%; 
+    height: 500px; 
+    object-fit: cover; 
+}
+
+.card-images {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.category-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+
+    color: #343a40;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 60px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid black ;
+    border-radius: 4px;
+    margin-right: 5px;;
+
+    color: #343a40;
+}
+
+button {
+    padding: 8px 12px;
+    color: #343a40;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h2, h3 {
+    color: #343a40;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4E595A;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+.blog-container {
+    width: 100%;
+}
+
+.carousel-item img {
+    height: auto;
+    object-fit: cover;
+}
+
+.blog-text-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    color: white;
+}
+
+.blog-text-content p {
+    color: white;
+}
+
+#blogCarousel {
+    width: 70%; 
+    overflow: hidden; 
+}
+
+.carousel-inner {
+    display: flex; 
+}
+
+.carousel-item {
+    width: 100%; 
+    flex: 0 0 auto; 
+}
+
+.card {
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.card-body {
+    flex: 1;
+}
+
+.blog-section .carousel-inner .carousel-item img {
+    width: 100%; 
+    max-height: 300px; 
+    object-fit: cover; 
+}
+
+.individual-text-content > ul > li {
+    font-size: 16px;
+    line-height: 1.6;
+    list-style: none;
+    color: #4E595A;
+;
+
+}
+
+.basket-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    height: 100px;
+
+    margin-bottom: 20px;
+}
+
+.remove-button {
+    width: 100px;
+    align-self: flex-start;
+
+}
+
+.quantity-form {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+
+    .blog-text-content {
+        font-size: 14px;
+    }
+
+    .blog-text-content p {
+        font-size: 14px;
+    }
+
+    .individual-text-content > ul > li {
+        font-size: 14px;
+    }
+
+    .blog-section .carousel-inner .carousel-item img {
+        height: auto;
+    }
+
+    #blogCarousel {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .col {
+        flex: 0 0 80%;
+    }
+
+    .card {
+        height: auto;
+        margin-bottom: 20px; 
+    }
+
+    .card {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    
+    .card-images {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .category-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 10px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 10px;
+    }
+    
+    label {
+        color: #343a40;
+        margin-right: 0; 
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input {
+        width: 100%; 
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    
+    select {
+        width: 100%; 
+        padding: 8px;
+        border: 1px solid black;
+        border-radius: 4px;
+        margin-right: 0;
+        margin-bottom: 10px;
+        color: #343a40;
+    }
+    
+    button {
+        padding: 8px 12px;
+        color: #343a40;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+}

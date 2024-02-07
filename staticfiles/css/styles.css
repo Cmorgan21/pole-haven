@@ -1,0 +1,51 @@
+#messages-container {
+    transition: opacity 0.5s ease-in-out;
+    margin: 0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.fade-in {
+    opacity: 1; /* Set opacity to 1 for fade-in */
+}
+
+.fade-out {
+    opacity: 0; /* Set opacity to 0 for fade-out */
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+}
+
+.alert {
+    width: 90%;
+    margin: 10px 0; 
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 60px;
+
+}
+
+h2 {
+    color: #343a40; /* Dark text color */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4E595A; /* Medium gray text color */
+}
+
+@media (max-width: 768px) {
+    .alert {
+        width: 100%; 
+    }
+}

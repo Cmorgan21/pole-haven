@@ -1,0 +1,19 @@
+.about-section {
+    padding: 40px 0;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    color: #343a40; /* Dark text color */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4E595A; /* Medium gray text color */
+}
