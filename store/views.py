@@ -7,13 +7,12 @@ from blog.models import Post
 from .forms import ContactForm
 
 
-
 # Create your views here.
 
 def item_list(request):
-    latest_blog_posts = Post.objects.filter(status=1).order_by('-created_on')[:3] 
+    latest_blog_posts = Post.objects.filter(status=1).order_by('-created_on')[:3]
     Items = Item.objects.all()
-    return render(request, "store/home.html", {"items":Items,'latest_blog_posts': latest_blog_posts})
+    return render(request, "store/home.html", {"items": Items, 'latest_blog_posts': latest_blog_posts})
 
 
 def item_detail(request, slug):
@@ -21,6 +20,7 @@ def item_detail(request, slug):
     item = get_object_or_404(Item, slug=slug)
     related_items = Item.objects.filter(category=item.category).exclude(slug=item.slug).order_by('?')[:4]
     return render(request, 'store/item_detail.html', {'item': item, 'related_items': related_items})
+
 
 def add_to_cart(request, slug):
     item = get_object_or_404(Item, slug=slug)
@@ -55,6 +55,7 @@ def add_to_cart(request, slug):
 
     return redirect("store:item_detail", slug=slug)
 
+
 def remove_from_cart(request, slug):
     item = get_object_or_404(Item, slug=slug)
     order_qs = Order.objects.filter(user=request.user, ordered=False)
@@ -84,7 +85,7 @@ def remove_from_cart(request, slug):
     else:
         messages.info(request, "You do not have an active order")
         return redirect("store:item_detail", slug=slug)
-    
+
 
 def order_summary(request):
     orders = Order.objects.filter(user=request.user, ordered=False)
@@ -92,8 +93,8 @@ def order_summary(request):
     # Calculate total order price, you can customize this based on your model structure
     total_price = sum(order.get_total() for order in orders)
 
-    return render(request, 'store/order_summary.html', {'orders': orders,
-        'total_price': total_price,} )
+    return render(request, 'store/order_summary.html', {'orders': orders, 'total_price': total_price})
+
 
 def store_view(request):
     category_filter = request.GET.get('category')
@@ -106,6 +107,7 @@ def store_view(request):
         items = items.filter(category=category_filter)
 
     return render(request, 'store/online_store.html', {'items': items, 'categories': categories})
+
 
 def contact(request):
     if request.method == 'POST':
@@ -121,7 +123,7 @@ def contact(request):
             send_mail(
                 'Pole Haven Contact Form',
                 email_message,
-                'callummorgan666@gmail.com', 
+                'callummorgan666@gmail.com',
                 [email],
                 fail_silently=False,
             )
