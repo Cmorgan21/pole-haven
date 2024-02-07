@@ -61,7 +61,7 @@ h2, h3 {
 p {
     font-size: 18px;
     line-height: 1.6;
-    color: #6c757d;
+    color: #4E595A;
 }
 
 a {
@@ -126,7 +126,9 @@ a:hover {
 .individual-text-content > ul > li {
     font-size: 16px;
     line-height: 1.6;
-    color: #6c757d;
+    list-style: none;
+    color: #4E595A;
+;
 
 }
 

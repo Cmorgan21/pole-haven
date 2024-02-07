@@ -1,6 +1,5 @@
 .about-section {
     padding: 40px 0;
-    background-color: #f8f9fa; /* Light gray background */
 }
 
 .about-container {
@@ -16,5 +15,5 @@ h2 {
 p {
     font-size: 18px;
     line-height: 1.6;
-    color: #6c757d; /* Medium gray text color */
+    color: #4E595A; /* Medium gray text color */
 }

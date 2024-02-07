@@ -3,8 +3,14 @@ section {
     padding: 30px 10px;
 }
 
-h2 {
-    color: #333;
+h2, h3 {
+    color: #343a40;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4E595A;
 }
 
 form {
