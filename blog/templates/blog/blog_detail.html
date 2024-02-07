@@ -18,7 +18,7 @@
         </div>
         <hr>
         <div>
-            <p>{{ post.content | safe }}</p>
+            <p>{{ post.content|linebreaks | safe }}</p>           
             <p>Created by {{ post.author }} on {{ post.created_on }}</p>
         </div>
         <hr>
