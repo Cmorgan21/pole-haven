@@ -39,6 +39,7 @@
                     {{ comment.body }} <br>
                     {{ comment.created_on }}
                     {% if user.is_authenticated and comment.author == user %}
+                    <br>
                     <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
                     <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
