@@ -61,14 +61,10 @@
             {% for related_item in related_items %}
             <div class="col mb-5">
                 <div class="card h-100">
-                    <!-- Product image-->
-                    <img class="card-img-top" src="{{ related_item.featured_image.url }}" alt="..." />
-                    <!-- Product details-->
+                    <img class="card-img-top" src="{{ related_item.featured_image.url }}" alt="{{ related_item.title }}" />
                     <div class="card-body p-4">
                         <div class="text-center">
-                            <!-- Product name-->
                             <h5 class="fw-bolder">{{ related_item.title }}</h5>
-                            <!-- Product price-->
                             {% if related_item.discount_price %}
                             <span class="text-decoration-line-through">£{{ related_item.price }}</span>
                             <span>£{{ related_item.discount_price }}</span>
@@ -77,7 +73,6 @@
                             {% endif %}
                         </div>
                     </div>
-                    <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{ related_item.get_absolute_url }}">View details</a></div>
                     </div>
@@ -91,5 +86,3 @@
     </div>
 </section>
 {% endblock %}
-
-

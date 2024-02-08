@@ -3,40 +3,40 @@
 {% block title %}Order Summary{% endblock %}
 
 {% block header %}
-{% endblock %}
+{% endblock header %}
 
 {% block content %}
-<section class="container mt-5">
-    <h1 class="text-center mb-4">Order Summary</h1>
+    <section class="container mt-5">
+        <h1 class="text-center mb-4">Order Summary</h1>
 
-    {% if orders %}
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Item</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for order in orders %}
-                        {% for order_item in order.items.all %}
-                            <tr>
-                                <th scope="row">{{ forloop.counter }}</th>
-                                <td>{{ order_item.item.title }}</td>
-                                <td>{{ order_item.quantity }}</td>
-                                <td>£{{ order_item.get_final_price }}</td>
-                            </tr>
+        {% if orders %}
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                            {% for order_item in order.items.all %}
+                                <tr>
+                                    <th scope="row">{{ forloop.counter }}</th>
+                                    <td>{{ order_item.item.title }}</td>
+                                    <td>{{ order_item.quantity }}</td>
+                                    <td>£{{ order_item.get_final_price }}</td>
+                                </tr>
+                            {% endfor %}
                         {% endfor %}
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        <p class="text-end mt-3"><strong>Total: £{{ total_price }}</strong></p>
-    {% else %}
-        <p class="text-center">No orders found.</p>
-    {% endif %}
-</section>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-end mt-3"><strong>Total: £{{ total_price }}</strong></p>
+        {% else %}
+            <p class="text-center">No orders found.</p>
+        {% endif %}
+    </section>
 {% endblock %}

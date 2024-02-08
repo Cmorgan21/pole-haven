@@ -10,15 +10,15 @@
 {% endblock header %}
 
 {% block content %}
-<section class="contact-section">
-    <div class="welcome-text">
-        <h2>Contact us!</h2>
-        <p>Chose a category so we can assign you to the correct member of staff. This will ensure we can deal with your enquiry quickly and effectively. Hold tight and out team will be in touch with you shortly!</p>
-    </div>
-    <form method="post" action="{% url 'store:contact' %}" class="contact-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-outline-dark" type="submit">Submit</button>
-    </form>
-</section>
+    <section class="contact-section">
+        <div class="welcome-text">
+            <h2>Contact us!</h2>
+            <p>Choose a category so we can assign you to the correct member of staff. This will ensure we can deal with your enquiry quickly and effectively. Hold tight, and our team will be in touch with you shortly!</p>
+        </div>
+        <form method="post" action="{% url 'store:contact' %}" class="contact-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-outline-dark" type="submit">Submit</button>
+        </form>
+    </section>
 {% endblock %}
