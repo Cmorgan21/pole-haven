@@ -5,72 +5,74 @@
 {% block links %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/blog-styles.css' %}">
 {% endblock %}
+
 {% block header %}
 {% endblock header %}
-{% block content %}
-<div class="blog-content-container">
-    <div class="img-container">
-        <img class="blog-image" src="{% if 'placeholder' in post.featured_image.url %}{% static 'images/default.jpg' %}{% else %}{{ post.featured_image.url }}{% endif %}" alt="..." />
-    </div>
-    <div class="content-container">
-        <div class="title-container">
-            <h1>{{ post.title }}</h1>
-        </div>
-        <hr>
-        <div>
-            <p>{{ post.content|linebreaks | safe }}</p>           
-            <p>Created by {{ post.author }} on {{ post.created_on }}</p>
-        </div>
-        <hr>
-        <div class="comment-container">
-            {% if comment_count == 0 %}
-            <h4>No comments have been made</h4>
-            {% else %}
-            <h4>{{ comment_count }} Comments:</h4>
-            {% endif %}
-            <div>
-                {% for comment in comments %}
-                <div class="p-2 comments">
-                {% if comment.approved %}
-                  <p class="font-weight-bold">
-                    {{ comment.author }} commented:
-                  </p>
-                  <div id="comment{{ comment.id }}">
-                    {{ comment.body }} <br>
-                    {{ comment.created_on }}
-                    {% if user.is_authenticated and comment.author == user %}
-                    <br>
-                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
-                    {% endif %}
-                  </div>
-                  <hr>
-                  {% elif not comment.approved and comment.author == user %}
 
-                  <div id="comment{{ comment.id }}" class="approval-text">
-                    {{ comment.body }} <br>
-                    {{ comment.created_on }}
-                  <p class="approval">
-                    This comment is awaiting approval
-                  </p>
-                  {% endif %}
-                </div>
-                {% endfor %}
-                <div class="comment-form-container"></div>
-                    <div class="col-md-4 card mb-4 mt-3 form-body">
-                        <div class="card-body">
-                        {% if user.is_authenticated %}
-                        <h3>Leave a comment:</h3>
-                        <p>Posting as: {{ user.username }}</p>
-                        <form id="commentForm" method="post">
-                            {{ comment_form | crispy }}
-                            {% csrf_token %}
-                            <button id="submitButton" type="submit"
-                            class="btn btn-signup btn-lg">Submit</button>
-                        </form>
-                        {% else %}
-                        <p>Log in to leave a comment</p>
-                        {% endif %}
+{% block content %}
+    <div class="blog-content-container">
+        <div class="img-container">
+            <img class="blog-image" src="{% if 'placeholder' in post.featured_image.url %}{% static 'images/default.jpg' %}{% else %}{{ post.featured_image.url }}{% endif %}" alt="...">
+        </div>
+        <div class="content-container">
+            <div class="title-container">
+                <h1>{{ post.title }}</h1>
+            </div>
+            <hr>
+            <div>
+                <p>{{ post.content|linebreaks | safe }}</p>
+                <p>Created by {{ post.author }} on {{ post.created_on }}</p>
+            </div>
+            <hr>
+            <div class="comment-container">
+                {% if comment_count == 0 %}
+                    <h4>No comments have been made</h4>
+                {% else %}
+                    <h4>{{ comment_count }} Comments:</h4>
+                {% endif %}
+                <div>
+                    {% for comment in comments %}
+                        <div class="p-2 comments">
+                            {% if comment.approved %}
+                                <p class="font-weight-bold">
+                                    {{ comment.author }} commented:
+                                </p>
+                                <div id="comment{{ comment.id }}">
+                                    {{ comment.body }} <br>
+                                    {{ comment.created_on }}
+                                    {% if user.is_authenticated and comment.author == user %}
+                                        <br>
+                                        <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                                        <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                                    {% endif %}
+                                </div>
+                                <hr>
+                            {% elif not comment.approved and comment.author == user %}
+                                <div id="comment{{ comment.id }}" class="approval-text">
+                                    {{ comment.body }} <br>
+                                    {{ comment.created_on }}
+                                    <p class="approval">
+                                        This comment is awaiting approval
+                                    </p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                    <div class="comment-form-container">
+                        <div class="col-md-4 card mb-4 mt-3 form-body">
+                            <div class="card-body">
+                                {% if user.is_authenticated %}
+                                    <h3>Leave a comment:</h3>
+                                    <p>Posting as: {{ user.username }}</p>
+                                    <form id="commentForm" method="post">
+                                        {{ comment_form | crispy }}
+                                        {% csrf_token %}
+                                        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                    </form>
+                                {% else %}
+                                    <p>Log in to leave a comment</p>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,25 +80,19 @@
         </div>
     </div>
     <!-- Delete confirmation modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1"
-        aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"
-                        id="deleteModalLabel">Delete comment?</h5>
-                    <button type="button" class="btn-close"
-                        data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Are you sure you want to delete your comment?
-                    This action cannot be undone.
+                    Are you sure you want to delete your comment? This action cannot be undone.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close</button>
-                    <a id="deleteConfirm" href="#" class="btn
-                        btn-danger">Delete</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
                 </div>
             </div>
         </div>
@@ -104,6 +100,4 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/comments.js' %}"></script>
-</div>
-
 {% endblock %}
