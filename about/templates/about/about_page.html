@@ -4,32 +4,32 @@
 {% block title %}About Us{% endblock %}
 
 {% block header %}
-{% endblock header %}
+{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
 
-<section class="about-section">
-    <div class="about-container">
-        <h2>About Us</h2>
-        <p>
-            Welcome to Pole Haven! We are dedicated to providing you with the best pole dancing products and accessories. Our mission is to make pole dancing accessible to everyone, from beginners to professionals.
-            Explore our online store, read our blog, and join our community. Feel free to contact us if you have any questions or suggestions. Happy dancing!
-        </p>
-        <h5>How did Pole Haven start?</h5>
-        <p>
-            Pole Haven originally started out as a very quick idea. In a growing market for pole dancing and the positive community, the thought of creating a place where people can buy their favourite clothes, grips, and accessories all in one place was just an opportunity that couldn't be missed.
-        </p>
-        <h5>Our Commitment</h5>
-        <p>
-            At Pole Haven, we are committed to providing high-quality products that enhance your pole dancing experience. Our team is passionate about creating a supportive and inclusive community for pole enthusiasts of all levels.
-        </p>
-        <h5>Join Us Today</h5>
-        <p>
-            Whether you're a seasoned pole dancer or just starting, we invite you to be a part of the Pole Haven community. Explore our store, connect with us on social media, and share your pole journey with us. Let's dance together!
-        </p>
-        <a href="{% url 'blog-page' %}" class="btn btn-outline-dark ">Explore Our Blog</a>
-        <a href="{% url 'store:online-store' %}" class="btn btn-outline-dark">Explore Our Store</a>
-    </div>
-</section>
+    <section class="about-section">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Pole Haven! We are dedicated to providing you with the best pole dancing products and accessories. Our mission is to make pole dancing accessible to everyone, from beginners to professionals.
+                Explore our online store, read our blog, and join our community. Feel free to contact us if you have any questions or suggestions. Happy dancing!
+            </p>
+            <h5>How did Pole Haven start?</h5>
+            <p>
+                Pole Haven originally started out as a very quick idea. In a growing market for pole dancing and the positive community, the thought of creating a place where people can buy their favourite clothes, grips, and accessories all in one place was just an opportunity that couldn't be missed.
+            </p>
+            <h5>Our Commitment</h5>
+            <p>
+                At Pole Haven, we are committed to providing high-quality products that enhance your pole dancing experience. Our team is passionate about creating a supportive and inclusive community for pole enthusiasts of all levels.
+            </p>
+            <h5>Join Us Today</h5>
+            <p>
+                Whether you're a seasoned pole dancer or just starting, we invite you to be a part of the Pole Haven community. Explore our store, connect with us on social media, and share your pole journey with us. Let's dance together!
+            </p>
+            <a href="{% url 'blog-page' %}" class="btn btn-outline-dark">Explore Our Blog</a>
+            <a href="{% url 'store:online-store' %}" class="btn btn-outline-dark">Explore Our Store</a>
+        </div>
+    </section>
 {% endblock %}
