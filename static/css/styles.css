@@ -44,6 +44,11 @@ p {
     color: #4E595A; /* Medium gray text color */
 }
 
+.footer-title {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 @media (max-width: 768px) {
     .alert {
         width: 100%; 
