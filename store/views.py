@@ -113,23 +113,7 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            subject = form.cleaned_data['subject']
-            message = form.cleaned_data['message']
-
-            email_message = f"Pole Haven Support:\nName: {name}\nEmail: {email}\nSubject: {subject}\n\n{message}"
-
-            send_mail(
-                'Pole Haven Contact Form',
-                email_message,
-                'callummorgan666@gmail.com',
-                [email],
-                fail_silently=False,
-            )
-
             messages.success(request, 'Your message has been sent! We will get in touch with you shortly.')
-
             return redirect('store:contact_success')
 
     else:
