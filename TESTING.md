@@ -67,3 +67,26 @@ Messages.js
 comments.js 
 ![JSHINT - comments.js](images/testing-images/comments-javascript.png)
 </details>
+
+<details>
+<summary>PYLINT</summary>
+
+| App   | File             | Result           |
+|-------|------------------|------------------|
+| Pole_Store | settings.py       |   4 * Lines too long   |
+|  | urls.py       | 4 * Lines too long        |
+| about | urls.py       | Pass       |
+| | views.py | Pass       |
+| blog | views.py | 4 * Lines too long      |
+| | urls.py | 2 * Lines too long      |
+| | models.py | Pass     |
+| | forms.py | Pass     |
+| store | urls.py | Pass     |
+| | forms.py | Pass     |
+| | views.py | Pass     |
+
+Overall the only error encountered throughout the pylint was 'Lines too long'. This could not be changed due to indentation affecting the code or comments of explination for the code.
+
+Overall the rest of the code was clear and had no other errors
+
+</details>
