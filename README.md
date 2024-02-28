@@ -619,3 +619,10 @@ These existing features form the foundation of Pole Haven, providing a well-roun
 - Users can upload and manage their profile pictures, enhancing the community and social aspects of the platform.
 
 These future features are planned enhancements that will further enrich the user experience on Pole Haven. Each feature aims to provide additional functionality, interactivity, and personalization for users engaging with the platform.
+
+## Languages
+
+- HTML
+- CSS 
+- Javascript
+- Python
