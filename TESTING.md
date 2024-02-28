@@ -55,3 +55,15 @@
 ![W3C CSS Validator - styles CSS](images/testing-images/css-styles.png)
 
 </details>
+
+<details>
+<summary>JSHINT</summary>
+
+Overall both javascript files were tested and came back clear. Both files had no errors displayed
+
+Messages.js
+![JSHINT - messages.js](images/testing-images/messages-javascript.png)
+
+comments.js 
+![JSHINT - comments.js](images/testing-images/comments-javascript.png)
+</details>
