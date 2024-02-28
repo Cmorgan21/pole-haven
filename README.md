@@ -687,3 +687,15 @@ To view testing click the link below
 - [Procfile Heruko error issue](https://stackoverflow.com/questions/19846342/unable-to-parse-procfile) - for troubleshooting Procfile with case sensitivity for heruko
 
 - [URLS APP Name](https://stackoverflow.com/questions/61254816/what-is-the-purpose-of-app-name-in-urls-py-in-django) - Djanog urls error when django template can't be found solutiokn
+
+## Acknowledgements
+
+- Code Institute for providing the foundation knowledge of creating a full stack application using HTML, CSS, Javascript and Python
+
+- Chatgpt for helping me understand data, resolving bugs and giving feedback on code. 
+
+- Django Documentation
+
+- Bootstrap documentation and installation for use in website
+
+- Stackoverflow for support with overriding Bootstrap and different methods and ways to handle functions within Django
