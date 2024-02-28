@@ -677,3 +677,13 @@ To view testing click the link below
 | Adding incorrect quantity to the checkout section. It would either add +1 or nothing at all.       | Implemented proper handling of quantity input in the checkout section to accurately reflect user input.          |
 | Overriding Bootstrap with custom CSS sheets. Sometimes styles would work, and sometimes they wouldn't. | Resolved CSS conflicts by reordering the stylesheet links and ensuring custom styles did not override Bootstrap styles consistently. |
 | Delete functionality within the checkout area for orders not working.                               | Fixed the delete functionality in the checkout area by implementing the removal of items within the item page and updating the order summary accordingly. |
+
+## Credits
+
+- [ChatGPT](https://chat.openai.com/auth/login) for helping me understand more indepth about data models and how to create a relationship between models
+
+- [How to override Boostrap 5 with CSS styling](https://stackoverflow.com/questions/46715789/cant-override-bootstrap-class?rq=3) guidance on resolving overriding bootsrap styling with CSS files
+
+- [Procfile Heruko error issue](https://stackoverflow.com/questions/19846342/unable-to-parse-procfile) - for troubleshooting Procfile with case sensitivity for heruko
+
+- [URLS APP Name](https://stackoverflow.com/questions/61254816/what-is-the-purpose-of-app-name-in-urls-py-in-django) - Djanog urls error when django template can't be found solutiokn
