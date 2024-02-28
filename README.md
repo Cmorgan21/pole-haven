@@ -452,3 +452,150 @@ These agile methodologies ensure a flexible and iterative development process, a
 | 6      | Admin Panel and Content Management                 | - Create an admin panel for content and product management.<br>- Implement content approval and moderation functionalities.<br>- Ensure secure and efficient content management. |
 | 7      | Responsive Design and Cross-Browser Compatibility  | - Implement responsive design for a seamless experience on various devices.<br>- Ensure cross-browser compatibility for widespread accessibility.<br>- Conduct testing on different devices and browsers. |
 | 8      | Deployment and Final Testing                       | - Prepare for deployment on the Heroku cloud platform.<br>- Perform final testing and validation of the entire application.<br>- Ensure proper documentation for future maintenance. |
+
+### Existing Features
+
+#### Navigation
+- The website features a user-friendly navigation system allowing users to seamlessly explore different sections.
+- A clear and concise menu structure facilitates easy access to key pages such as Home, Blog, Store, and User Account.
+- Brand Logo for a more visually appealing naviation and will help users remeber the website
+
+![Navigation](images/navigation.png)
+
+
+#### Footer
+- The footer provides additional navigation options and essential links for users to access information such as About, Contact, and Policies.
+
+- Quick access to pages from footer with quick links
+
+- Summary of Pole Haven
+- Contact text with Developers Links
+
+![footer](images/footer.png)
+
+
+#### Landing Page
+- The landing page welcomes users with a dynamic carousel showcasing the latest blog posts and highlighted pole gear.
+- A visually appealing layout encourages users to explore the website further.
+
+**Welcome Section** 
+![Welcome Image](images/home-welcome-section.png)
+
+- Clear and Concise Message for users when they enter the website
+
+- Call to action for users looking to shop with direct link to store
+
+**Home Store** 
+![Home Store Image](images/home-store-section.png)
+
+- Store section for users to see displayed items as they enter the website. This allows users that are looking for items to see a limited about straight away.
+
+**Home Blog** 
+![Home Blog Image](images/home-blog-section.png)
+
+- Blog section to as users naviagte through the home page they can see another quality feature the website has. 
+
+- Detail about what the pole blog page has to offer
+
+- Call to action link directing users to blog page
+
+**Home What we do** 
+![What we do Image](images/what-we-do-section.png)
+
+- What we do section for users that are interested a bit more in what Pole Haven do and what they offer. 
+
+- The least important content at the bottom as Most User desire will be to shop or check tips and tricks first
+
+
+#### About Page
+- The About page provides detailed information about Pole Haven, its mission, and the team behind the platform.
+
+- Links directing to the important and main features of the website
+
+![About Page](images/about-page.png)
+
+
+#### Blog Page
+- Users can access a dedicated Blog page that presents a collection of engaging and informative articles.
+
+- Each blog post is displayed with clear headings, publication dates, and an interactive section for user comments.
+
+![Blog Page](images/pole-blog.png)
+
+#### Blog Post Page
+- Individual blog post pages allow users to delve into specific topics, providing a comprehensive reading experience.
+
+- A call-to-action button encourages users to explore related blog posts for continuous engagement.
+
+
+**Blog Post** 
+![Blog Post](images/blog-detail.png)
+
+**Blog Comment** 
+
+- Ability to comment on the blog posts and engage with the community and share thoughts
+
+- Users willbe directed to log in if the user has not logged in yet. If the user has logged it they be be presented with a box to input their content
+
+![Blog Comment](images/comments.png)
+
+![Blog Logged in Comment](images/loggedin-comment.png)
+
+
+#### Store Page
+- The Store section showcases a variety of pole gear, including pole grips, clothing, and accessories.
+- Each item is presented individually, featuring detailed information, pricing, and visuals to aid users in making informed decisions.
+
+![Store Page](images/pole-store.png)
+
+- Users will be able to filter the category of what they want to view for easier accesibility. If there are no items within the category the user will be informed
+
+![Filter Feature](images/filter-feature.png)
+
+![No items filter](images/no-category-item.png)
+
+
+#### Store Item Page
+- Users can view detailed information about specific store items, including product descriptions and pricing.
+
+- The streamlined layout enhances the shopping experience, allowing users to easily add items to their basket.
+
+**Item Detail Page** 
+![Item detail page](images/product-detail-view.png)
+
+**Related Items section** 
+
+- Users can View related items within the category and it will direct them straight to the items page for quick access
+
+- Users will be informed if there are no related products within the catergory.
+
+![Related Products](images/related-products.png)
+
+![No Related Products](images/no-related-products.png)
+
+#### Contact Page
+- The Contact page provides a means for users to connect with Pole Haven, fostering communication and engagement.
+
+- Users can submit inquiries or feedback through a user-friendly contact form.
+
+![Contact Page](images/contact-form.png)
+
+- Once user has submited contact form they will be displayed with a contact success form
+
+![Contact Success](images/email-success.png)
+
+#### LogIn, Logout, and Signup Page
+- User account functionalities are seamlessly integrated, allowing users to create accounts, log in, and log out.
+
+- Account creation provides users with additional accessibility features, including the ability to comment on blog posts and track order history.
+
+![Signup Page](images/signup.png)
+
+![Signin Page](images/pole-haven-sign-in.png)
+![Signout Page](images/pole-haven-signout.png)
+
+
+These existing features form the foundation of Pole Haven, providing a well-rounded and user-centric experience. Each feature is designed to enhance user engagement, streamline navigation, and offer a seamless platform for both content consumption and shopping.
+
+### Order Summary 
+![Signup Page](images/pole-haven-order-summary.png)
