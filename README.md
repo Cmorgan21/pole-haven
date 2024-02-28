@@ -243,3 +243,118 @@ class Comment(models.Model):
   - The application is deployed on the Heroku cloud platform, providing scalability and accessibility.
 
 This high-level structure ensures a modular, scalable, and maintainable architecture for Pole Haven. Components and features are organized to provide a seamless and engaging experience for users, while backend systems handle data storage, authentication, and content management efficiently.
+
+### The Skeleton Plane
+
+The Skeleton Plane focuses on the wireframes and basic structure of the user interface. Below are wireframes for key pages:
+
+#### Home Page
+
+![Home Page Wireframe](images/home-page.png)
+
+- The home page displays a clear welcome message for the landing page. Clear call to action for shoppers and cards of the latest items on display
+
+- Blog section to display some of the latest blogs for uses to quickly access if they are looking for blog content
+
+#### About Page
+
+![About Page Wireframe](images/about.png)
+
+- Detailed information about Pole Haven. What our purpose is and how we started
+
+#### Contact Page
+
+![Contact Page Wireframe](images/contact.png)
+
+- Contact Page for users to contact the website. Through an email form
+
+- Subject to filter issue quicker
+
+
+#### Blog Page
+
+![Blog Page Wireframe](images/blog-page.png)
+
+- Collection of blog posts to view with date created, blog title for reference anad a anchor tag to direct user to more detailed induvidual blog post
+
+- Pagination so users can view more ad older blog posts and easily access them without comprimsing on UX
+
+#### Blog Detail Page
+![Blog Detail Page Wireframe](images/blog-detail-page.png)
+
+
+- Individual blog posts with clear headings, publication date, author, description and a section for user comments
+
+- Allow users to view blog page in a full screen format. This allows them to see the blog in much better detail
+
+#### Store Page
+
+![Store Page Wireframe](images/store-page.png)
+
+- Products listed with images, title and price or discount price if applicable
+
+- Filter options for users to easily navigate and find specific items.
+
+- If a category does not exist this will be displayed to the user
+
+#### Store Detail Page
+
+![Store Detail Page Wireframe](images/store-detail-page.png)
+
+- Products listed with images, descriptions, and prices.
+
+- This also allows authenticated users to add to basket, remove from basket and add a specific quantity. Non authenticated users will be redirected to the login page
+
+- Related products section is also accesed at the bottom of the page with items within the same category
+
+#### Order Summary Page
+
+![Order Summary Wireframe](images/order-summary.png)
+
+- Items ordered are displayed. Quantity and Price / Discount Price and Total of all items
+
+- Adds item in a column fashion so users can easily see what they have ordered
+
+#### Login, Logout Pages
+
+![Login Wireframe](images/pole-haven-sign-in.png)
+
+- Allows users to login to their account
+
+- Redirects users to make an account or recover account if user can't / don't have an account
+
+![Signout Wireframe](images/pole-haven-signout.png)
+
+- Gives the users a prompt to ensure they want to sign out
+
+
+![Signup Wireframe](images/signup-page.png)
+- Username, Password, Confirm Password fields
+
+- Clear Password requirements so user understands what their password has to consist of
+
+- Directory to to Sign in
+
+- Allows users to be redirected to login page if they already have an account
+
+
+#### Responsive Design
+
+Responsive design has been carfully developed for desktop, tablet, mobile phone repsonsiveness. So users can get the best experience with any device they use to visit the website. 
+
+For best spacing and optimization a hamburger menu will has been used for mobile device users
+
+Hamburger
+![Hamburger Menu](images/mobile-hamburger.png)
+
+Blog Page
+![Mobile view of blog page](images/mobile-blog.png)
+
+Store
+![Mobile view of store](images/mobile-store-display.png)
+
+Viewed Product
+![Mobile view of viewed product](images/mobile-product-detail.png)
+
+Footer
+![Mobile view of footer](images/mobile-footer.png)
