@@ -662,3 +662,11 @@ These future features are planned enhancements that will further enrich the user
 [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate the Python code.
 
 [Nu HTML Checker](https://validator.w3.org/nu/) - Used to validate the HTML code.
+
+## Testing and Validation
+
+The testing approach involves a combination of unit tests, integration tests, and manual testing to ensure the reliability and functionality of the Pole Haven website. 
+
+To view testing click the link below
+
+[Testing Documentation](testing.md)
