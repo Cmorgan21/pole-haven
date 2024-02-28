@@ -358,3 +358,64 @@ Viewed Product
 
 Footer
 ![Mobile view of footer](images/mobile-footer.png)
+
+### The Surface Plane
+
+In the Surface Plane, we focus on the visual and sensory elements of the Pole Haven website, ensuring an aesthetically pleasing and engaging user experience.
+
+#### Color Palette
+
+The color palette is chosen to reflect the energetic and vibrant nature of pole dancing and aerial activities. Bright and contrasting colors are utilized to draw attention to key elements, while softer tones enhance readability and overall user comfort.
+
+![Colour Pallete](images/colour-pallet.png)
+
+#### Typography
+
+Clear and readable fonts are selected to enhance the legibility of content across the website. The typography is carefully chosen to convey a modern and dynamic vibe.
+
+Basic and consistont font allows the user to easily and clearly navigate throughout the website without struggling to read content
+
+![Colour Pallete](images/colour-contrast.png)
+
+
+#### Imagery
+
+High-quality images and visuals are incorporated to showcase pole gear, community events, and the dynamic world of pole dancing. The imagery is curated to resonate with the target audience and evoke a sense of excitement.
+
+- **Carousel Images:** Engaging visuals of the latest blog posts and featured pole gear. This allows a visually appealing method to display what the website has to offer without comprimising on UX 
+![Carousel](images/carousel.png)
+
+- **Image Cards:** Eye-catching visuals that complement the blog content.
+![Store Page](images/pole-store.png)
+
+
+#### UI Elements
+
+Consistent and intuitive UI elements are implemented throughout the website to provide a seamless and user-friendly navigation experience. Buttons, forms, and other interactive elements are designed to be easily recognizable and responsive with nice padding and spacing so the website isn't clustered.
+
+- **Buttons:** 
+- Bold and Clear button with a hover effect when the user hovers over it. This is a simple, but effective feature for a user to access other pages and content
+
+- Clear call to action
+
+![Button](images/button.png)
+- Hover effect
+
+![Button with Hover Effect](images/button-hover.png)
+
+
+- **Navigation:**
+The Navigation was created with simple but effective styling to ensure Users could easily access and visibly see the content. The spacing has been affective by allowing the naviagtion to be readable
+
+The Logo and Website name was another feature of the navigation to effective UX design for the user to see a rememberable logo and the company name
+
+#### Branding
+
+The Pole Haven logo and branding elements are strategically placed to reinforce the identity of the platform. The logo reflects the dynamic and inclusive nature of the pole community.
+
+- **Logo:** Clear and scalable logo placed in the header for brand visibility.
+
+![Logo](./images/pole-haven-logo.png)
+
+
+In the Surface Plane, our goal is to create a visually appealing and cohesive design that aligns with the brand identity and resonates with the target audience. The combination of color, typography, imagery, UI elements, and branding ensures a memorable and immersive user experience on Pole Haven.
