@@ -670,3 +670,10 @@ The testing approach involves a combination of unit tests, integration tests, an
 To view testing click the link below
 
 [Testing Documentation](testing.md)
+
+## Bugs and Fixes
+| Bug                                                                                                  | Fix                                                                                                                |
+|------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| Adding incorrect quantity to the checkout section. It would either add +1 or nothing at all.       | Implemented proper handling of quantity input in the checkout section to accurately reflect user input.          |
+| Overriding Bootstrap with custom CSS sheets. Sometimes styles would work, and sometimes they wouldn't. | Resolved CSS conflicts by reordering the stylesheet links and ensuring custom styles did not override Bootstrap styles consistently. |
+| Delete functionality within the checkout area for orders not working.                               | Fixed the delete functionality in the checkout area by implementing the removal of items within the item page and updating the order summary accordingly. |
