@@ -419,3 +419,36 @@ The Pole Haven logo and branding elements are strategically placed to reinforce 
 
 
 In the Surface Plane, our goal is to create a visually appealing and cohesive design that aligns with the brand identity and resonates with the target audience. The combination of color, typography, imagery, UI elements, and branding ensures a memorable and immersive user experience on Pole Haven.
+
+### Agile Methodology
+
+#### User Stories
+
+- User stories are used as a fundamental tool to define and communicate project requirements from an end user's perspective.
+- Each user story describes a specific piece of functionality or a feature, outlining what the user wants to achieve.
+
+
+
+
+#### Story Points
+- Story points are assigned to user stories to estimate and measure the complexity of implementation.
+- This agile estimation technique helps the development team gauge the effort required for each user story.
+
+To view User Stories and Story Points click here [User Stories Project](https://github.com/users/Cmorgan21/projects/3)
+
+#### Sprints Timetable
+- The project follows a sprint-based development approach with defined timeframes for each sprint.
+- Sprints are organized periods, usually 1-2 weeks, during which a set of user stories are planned, developed, tested, and delivered.
+
+These agile methodologies ensure a flexible and iterative development process, allowing for continuous improvement and adaptability to changing requirements.
+
+| Sprint | Goals                                               | Tasks                                                                      |
+|--------|-----------------------------------------------------|----------------------------------------------------------------------------|
+| 1      | Initial Setup and Project Structure                | - Project initialization: Django setup, database configuration, and project structure.<br>- Define data models for blog and store.<br>- Implement basic templates for landing page, blog, and store. |
+| 2      | Navigation, Footer and Static Pages                        | - Implement a user-friendly navigation system.<br>- Develop static pages: About, Contact, "What We Do".<br>- Style and design static pages for a consistent look and feel. |
+| 3      | Blog Functionality                                 | - Develop blog functionality with view and comment features.<br>- Create individual blog post pages with comments.<br>- Implement pagination system for blog posts. |
+| 4      | Store Functionality                                | - Implement store functionality to showcase pole gear products.<br>- Create detailed views for individual store items.<br>- Add filtering options for store items by category. |
+| 5      | User Authentication and Accounts                   | - Implement user authentication for account creation and login.<br>- Develop user account functionality with additional features.<br>- Enhance user profiles and account settings. |
+| 6      | Admin Panel and Content Management                 | - Create an admin panel for content and product management.<br>- Implement content approval and moderation functionalities.<br>- Ensure secure and efficient content management. |
+| 7      | Responsive Design and Cross-Browser Compatibility  | - Implement responsive design for a seamless experience on various devices.<br>- Ensure cross-browser compatibility for widespread accessibility.<br>- Conduct testing on different devices and browsers. |
+| 8      | Deployment and Final Testing                       | - Prepare for deployment on the Heroku cloud platform.<br>- Perform final testing and validation of the entire application.<br>- Ensure proper documentation for future maintenance. |
