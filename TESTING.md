@@ -90,3 +90,76 @@ Overall the only error encountered throughout the pylint was 'Lines too long'. T
 Overall the rest of the code was clear and had no other errors
 
 </details>
+
+## Lighthouse Score
+
+All Pages were tested with a lighhouse score Desktop and Mobile. This is to ensure the most effecient loading time, SEO, and Accessibiltiy. Here are the scores below
+
+### Home Page
+#### Desktop
+
+![Lighthouse Score - Home Page Desktop](images/testing-images/home-desktop.png)
+
+#### Mobile 
+![Lighthouse Score - Home Page Mobile](images/testing-images/home-mobile.png)
+
+### About Page
+
+#### Desktop
+![Lighthouse Score - Blog Page Desktop](images/testing-images/about-desktop.png)
+
+#### Mobile
+![Lighthouse Score - About Page Mobile](images/testing-images/about-mobile.png)
+
+### Contact Page
+
+#### Desktop
+![Lighthouse Score - Contact Page Desktop](images/testing-images/contact-desktop.png)
+
+#### Mobile
+![Lighthouse Score - Contact Page Mobile](images/testing-images/contact-mobile.png)
+
+### Store Page
+
+#### Desktop
+![Lighthouse Score - Store Page Desktop](images/testing-images/store-desktop.png)
+
+#### Mobile
+![Lighthouse Score - Store Page Mobile](images/testing-images/store-mobile.png)
+
+### Product Page
+
+#### Desktop
+![Lighthouse Score - Product Page Desktop](images/testing-images/product-desktop.png)
+
+#### Mobile
+![Lighthouse Score - Product Page Mobile](images/testing-images/product-mobile.png)
+
+### Blog Page
+
+#### Desktop
+![Lighthouse Score - Blog Page Desktop](images/testing-images/blog-desktop.png)
+
+#### Mobile
+![Lighthouse Score - Blog Page Mobile](images/testing-images/blog-mobile.png)
+
+### Blog Detail Page
+
+#### Desktop
+![Lighthouse Score - Blog Page Desktop](images/testing-images/blog-detail-desktop.png)
+
+#### Mobile
+![Lighthouse Score - Blog Page Mobile](images/testing-images/blog-detail-mobile.png)
+
+### Order Summary
+
+#### Desktop
+![Lighthouse Score - Order Page Desktop](images/testing-images/order-desktop.png)
+
+#### Mobile
+![Lighthouse Score - Order Page Mobile](images/testing-images/order-mobile.png)
+
+
+Overall the lighthouse scores were high and to the best of the abaility to ensure best peformance and accesibility for users. Then only error that I had encountered but couldnt rectify was cloudinary images being displayed an insecure http requests.
+
+After research I could not find a suitable or correct method to remove this error to improve the best practice score.
