@@ -678,6 +678,23 @@ To view testing click the link below
 | Overriding Bootstrap with custom CSS sheets. Sometimes styles would work, and sometimes they wouldn't. | Resolved CSS conflicts by reordering the stylesheet links and ensuring custom styles did not override Bootstrap styles consistently. |
 | Delete functionality within the checkout area for orders not working.                               | Fixed the delete functionality in the checkout area by implementing the removal of items within the item page and updating the order summary accordingly. |
 
+## Cloning this repository
+
+To clone this repository for local development, follow these steps:
+
+1. Open your terminal or command prompt.
+2. Navigate to the directory where you want to clone the repository.
+3. Run the following command:
+   ```
+   git clone https://github.com/your-username/pole-haven.git
+   ```
+4. cd into project directory
+
+5. 
+    ```
+    Run python3 manage.py runserver
+    ```
+
 ## Credits
 
 - [ChatGPT](https://chat.openai.com/auth/login) for helping me understand more indepth about data models and how to create a relationship between models
