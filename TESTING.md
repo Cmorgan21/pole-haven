@@ -10,19 +10,19 @@
   Throughout the test the only warning with all pages was to ensure correct headings were being used. This was due to each html document not displaying the base.html with the other html documents from Django. However correct headings were used
 
 ### Home Page
-![W3C HTML Validator - Home Page](images/testing-images/html-home.png)
+![W3C HTML Validator - Home Page](./static/images/testing-images/html-home.png)
 
 ### About Page
-![W3C HTML Validator - About Page](images/testing-images/html-about.png)
+![W3C HTML Validator - About Page](./static/images/testing-images/html-about.png)
 
 ### Contact Page
-![W3C HTML Validator - Contact Page](images/testing-images/html-contact.png)
+![W3C HTML Validator - Contact Page](./static/images/testing-images/html-contact.png)
 
 ### Blog Page
-![W3C HTML Validator - Blog Page](images/testing-images/html-blog.png)
+![W3C HTML Validator - Blog Page](./static/images/testing-images/html-blog.png)
 
 ### Store Detail Page
-![W3C HTML Validator - Store Page](images/testing-images/html-about.png)
+![W3C HTML Validator - Store Page](./static/images/testing-images/html-about.png)
 
 ### Order Summary Page
 ![W3C HTML Validator - Order Summary Page](link-to-validation-report)
@@ -37,22 +37,22 @@
   All Pages passed the CSS Validator with no erros
 
 ### about.css
-![W3C CSS Validator - about CSS](images/testing-images/css-about.png)
+![W3C CSS Validator - about CSS](./static/images/testing-images/css-about.png)
 
 ### blog-styles.css
-![W3C CSS Validator - blog styles CSS](images/testing-images/css-blog-styles.png)
+![W3C CSS Validator - blog styles CSS](./static/images/testing-images/css-blog-styles.png)
 
 ### contact.css
-![W3C CSS Validator - contact CSS](images/testing-images/css-contact.png)
+![W3C CSS Validator - contact CSS](./static/images/testing-images/css-contact.png)
 
 ### forms.css
-![W3C CSS Validator - forms CSS](images/testing-images/css-forms.png)
+![W3C CSS Validator - forms CSS](./static/images/testing-images/css-forms.png)
 
 ### online-store.css
-![W3C CSS Validator - online store CSS](images/testing-images/css-online-store.png)
+![W3C CSS Validator - online store CSS](./static/images/testing-images/css-online-store.png)
 
 ### styles.css
-![W3C CSS Validator - styles CSS](images/testing-images/css-styles.png)
+![W3C CSS Validator - styles CSS](./static/images/testing-images/css-styles.png)
 
 </details>
 
@@ -62,10 +62,10 @@
 Overall both javascript files were tested and came back clear. Both files had no errors displayed
 
 Messages.js
-![JSHINT - messages.js](images/testing-images/messages-javascript.png)
+![JSHINT - messages.js](./static/images/testing-images/messages-javascript.png)
 
 comments.js 
-![JSHINT - comments.js](images/testing-images/comments-javascript.png)
+![JSHINT - comments.js](./static/images/testing-images/comments-javascript.png)
 </details>
 
 <details>
