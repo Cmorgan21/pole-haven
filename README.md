@@ -599,3 +599,23 @@ These existing features form the foundation of Pole Haven, providing a well-roun
 
 ### Order Summary 
 ![Signup Page](images/pole-haven-order-summary.png)
+
+## Future Features
+
+### Checkout
+- Implementation of a streamlined and user-friendly checkout process for seamless and secure transactions.
+- Integration of payment gateways and confirmation mechanisms for successful purchases.
+
+### Liking Posts
+- Introduction of a feature that allows users to express their appreciation for blog posts by liking or upvoting them.
+- Enhanced engagement through positive feedback and acknowledgment of valuable content.
+
+### Wishlist
+- Implementation of a wishlist functionality, enabling users to curate a personalized list of desired products.
+- Users can easily add and manage items in their wishlist for future consideration and purchase.
+
+### Profile Pictures
+- Integration of profile picture functionality for users to personalize their accounts.
+- Users can upload and manage their profile pictures, enhancing the community and social aspects of the platform.
+
+These future features are planned enhancements that will further enrich the user experience on Pole Haven. Each feature aims to provide additional functionality, interactivity, and personalization for users engaging with the platform.
