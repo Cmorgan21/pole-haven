@@ -626,3 +626,39 @@ These future features are planned enhancements that will further enrich the user
 - CSS 
 - Javascript
 - Python
+
+## Tools and Technologies
+
+[Heruko](https://www.heroku.com/) - Host website
+
+[Visual Studios](https://code.visualstudio.com/) create website
+
+[Code Anywhere](https://codeanywhere.com/)
+
+[Balsamiq](https://balsamiq.cloud/) - create wireframe of website
+
+[Unsplashed](https://unsplash.com/) - use copyright free images
+
+[Draw.io](http://draw.io)
+
+[Contrast Checker](https://webaim.org/resources/contrastchecker/) - check contrast of colours on wesbite 
+
+[Boostrap](https://getbootstrap.com/)
+
+[ChatGPT](https://chat.openai.com/)
+
+[StackOverflow](https://stackoverflow.com/)
+
+[Cloudinary](https://cloudinary.com) - Image API platform 
+
+[ElephantSQL](https://www.elephantsql.com) - Used to store the PostgreSQL database.
+
+[Canva](https://www.canva.com) - Used to create the website logo image.
+
+[Jshint](https://jshint.com/) - Used to validate the JavaScript code.
+
+[W3C - CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code.
+
+[CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate the Python code.
+
+[Nu HTML Checker](https://validator.w3.org/nu/) - Used to validate the HTML code.
