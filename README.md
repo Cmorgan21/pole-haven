@@ -4,7 +4,7 @@ Pole Haven is a Pole retail store and blog website. Where polers and ariel althe
 
 Live Site: [Pole Haven](https://pole-haven-539c8a40c44d.herokuapp.com/)
 
-![Website](/images/live-website.png)
+![Website](./static/images/live-website.png)
 
 ## Contents
 
@@ -114,7 +114,7 @@ The Structure Plane outlines the high-level architecture and organization of Pol
 The following tables are the data models of the the Store Page. All Models were neccesary for a user to view an item. Add it to an order and delete it from their order
 
 ##### Store Models
-![Item Model](images/item-model.png)
+![Item Model](./static/images/item-model.png)
 ```
 class Item(models.Model):
     title = models.CharField(max_length=100)
@@ -126,7 +126,7 @@ class Item(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
 ```
 
-![Order-item Model](images/order-item-model.png)
+![Order-item Model](./static/images/order-item-model.png)
 
 ```
 class OrderItem(models.Model):
@@ -137,7 +137,7 @@ class OrderItem(models.Model):
 
 ```
 
-![Order Model](images/order-model.png)
+![Order Model](./static/images/order-model.png)
 
 ```
 class Order(models.Model):
@@ -154,7 +154,7 @@ The following tables are the data models of the the Blog Page. All Models were n
 
 ##### Blog Models
 
-![Post Model](images/post-model.png)
+![Post Model](./static/images/post-model.png)
 
 ```
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -174,7 +174,7 @@ class Post(models.Model):
 ```
 
 
-![Comment Model](images/comment-model.png)
+![Comment Model](./static/images/comment-model.png)
 
 ```
 class Comment(models.Model):
@@ -250,7 +250,7 @@ The Skeleton Plane focuses on the wireframes and basic structure of the user int
 
 #### Home Page
 
-![Home Page Wireframe](images/home-page.png)
+![Home Page Wireframe](./static/images/home-page.png)
 
 - The home page displays a clear welcome message for the landing page. Clear call to action for shoppers and cards of the latest items on display
 
@@ -258,13 +258,13 @@ The Skeleton Plane focuses on the wireframes and basic structure of the user int
 
 #### About Page
 
-![About Page Wireframe](images/about.png)
+![About Page Wireframe](./static/images/about.png)
 
 - Detailed information about Pole Haven. What our purpose is and how we started
 
 #### Contact Page
 
-![Contact Page Wireframe](images/contact.png)
+![Contact Page Wireframe](./static/images/contact.png)
 
 - Contact Page for users to contact the website. Through an email form
 
@@ -273,14 +273,14 @@ The Skeleton Plane focuses on the wireframes and basic structure of the user int
 
 #### Blog Page
 
-![Blog Page Wireframe](images/blog-page.png)
+![Blog Page Wireframe](./static/images/blog-page.png)
 
 - Collection of blog posts to view with date created, blog title for reference anad a anchor tag to direct user to more detailed induvidual blog post
 
 - Pagination so users can view more ad older blog posts and easily access them without comprimsing on UX
 
 #### Blog Detail Page
-![Blog Detail Page Wireframe](images/blog-detail-page.png)
+![Blog Detail Page Wireframe](./static/images/blog-detail-page.png)
 
 
 - Individual blog posts with clear headings, publication date, author, description and a section for user comments
@@ -289,7 +289,7 @@ The Skeleton Plane focuses on the wireframes and basic structure of the user int
 
 #### Store Page
 
-![Store Page Wireframe](images/store-page.png)
+![Store Page Wireframe](./static/images/store-page.png)
 
 - Products listed with images, title and price or discount price if applicable
 
@@ -299,7 +299,7 @@ The Skeleton Plane focuses on the wireframes and basic structure of the user int
 
 #### Store Detail Page
 
-![Store Detail Page Wireframe](images/store-detail-page.png)
+![Store Detail Page Wireframe](./static/images/store-detail-page.png)
 
 - Products listed with images, descriptions, and prices.
 
@@ -309,7 +309,7 @@ The Skeleton Plane focuses on the wireframes and basic structure of the user int
 
 #### Order Summary Page
 
-![Order Summary Wireframe](images/order-summary.png)
+![Order Summary Wireframe](./static/images/order-summary.png)
 
 - Items ordered are displayed. Quantity and Price / Discount Price and Total of all items
 
@@ -317,18 +317,18 @@ The Skeleton Plane focuses on the wireframes and basic structure of the user int
 
 #### Login, Logout Pages
 
-![Login Wireframe](images/pole-haven-sign-in.png)
+![Login Wireframe](./static/images/pole-haven-sign-in.png)
 
 - Allows users to login to their account
 
 - Redirects users to make an account or recover account if user can't / don't have an account
 
-![Signout Wireframe](images/pole-haven-signout.png)
+![Signout Wireframe](./static/images/pole-haven-signout.png)
 
 - Gives the users a prompt to ensure they want to sign out
 
 
-![Signup Wireframe](images/signup-page.png)
+![Signup Wireframe](./static/images/signup-page.png)
 - Username, Password, Confirm Password fields
 
 - Clear Password requirements so user understands what their password has to consist of
@@ -345,19 +345,19 @@ Responsive design has been carfully developed for desktop, tablet, mobile phone 
 For best spacing and optimization a hamburger menu will has been used for mobile device users
 
 Hamburger
-![Hamburger Menu](images/mobile-hamburger.png)
+![Hamburger Menu](./static/images/mobile-hamburger.png)
 
 Blog Page
-![Mobile view of blog page](images/mobile-blog.png)
+![Mobile view of blog page](./static/images/mobile-blog.png)
 
 Store
-![Mobile view of store](images/mobile-store-display.png)
+![Mobile view of store](./static/images/mobile-store-display.png)
 
 Viewed Product
-![Mobile view of viewed product](images/mobile-product-detail.png)
+![Mobile view of viewed product](./static/images/mobile-product-detail.png)
 
 Footer
-![Mobile view of footer](images/mobile-footer.png)
+![Mobile view of footer](./static/images/mobile-footer.png)
 
 ### The Surface Plane
 
@@ -367,7 +367,7 @@ In the Surface Plane, we focus on the visual and sensory elements of the Pole Ha
 
 The color palette is chosen to reflect the energetic and vibrant nature of pole dancing and aerial activities. Bright and contrasting colors are utilized to draw attention to key elements, while softer tones enhance readability and overall user comfort.
 
-![Colour Pallete](images/colour-pallet.png)
+![Colour Pallete](./static/images/colour-pallet.png)
 
 #### Typography
 
@@ -375,7 +375,7 @@ Clear and readable fonts are selected to enhance the legibility of content acros
 
 Basic and consistont font allows the user to easily and clearly navigate throughout the website without struggling to read content
 
-![Colour Pallete](images/colour-contrast.png)
+![Colour Pallete](./static/images/colour-contrast.png)
 
 
 #### Imagery
@@ -383,10 +383,10 @@ Basic and consistont font allows the user to easily and clearly navigate through
 High-quality images and visuals are incorporated to showcase pole gear, community events, and the dynamic world of pole dancing. The imagery is curated to resonate with the target audience and evoke a sense of excitement.
 
 - **Carousel Images:** Engaging visuals of the latest blog posts and featured pole gear. This allows a visually appealing method to display what the website has to offer without comprimising on UX 
-![Carousel](images/carousel.png)
+![Carousel](./static/images/carousel.png)
 
 - **Image Cards:** Eye-catching visuals that complement the blog content.
-![Store Page](images/pole-store.png)
+![Store Page](./static/images/pole-store.png)
 
 
 #### UI Elements
@@ -398,10 +398,10 @@ Consistent and intuitive UI elements are implemented throughout the website to p
 
 - Clear call to action
 
-![Button](images/button.png)
+![Button](./static/images/button.png)
 - Hover effect
 
-![Button with Hover Effect](images/button-hover.png)
+![Button with Hover Effect](./static/images/button-hover.png)
 
 
 - **Navigation:**
@@ -415,7 +415,7 @@ The Pole Haven logo and branding elements are strategically placed to reinforce 
 
 - **Logo:** Clear and scalable logo placed in the header for brand visibility.
 
-![Logo](./images/pole-haven-logo.png)
+![Logo](./static/images/pole-haven-logo.png)
 
 
 In the Surface Plane, our goal is to create a visually appealing and cohesive design that aligns with the brand identity and resonates with the target audience. The combination of color, typography, imagery, UI elements, and branding ensures a memorable and immersive user experience on Pole Haven.
@@ -460,7 +460,7 @@ These agile methodologies ensure a flexible and iterative development process, a
 - A clear and concise menu structure facilitates easy access to key pages such as Home, Blog, Store, and User Account.
 - Brand Logo for a more visually appealing naviation and will help users remeber the website
 
-![Navigation](images/navigation.png)
+![Navigation](./static/images/navigation.png)
 
 
 #### Footer
@@ -471,7 +471,7 @@ These agile methodologies ensure a flexible and iterative development process, a
 - Summary of Pole Haven
 - Contact text with Developers Links
 
-![footer](images/footer.png)
+![footer](./static/images/footer.png)
 
 
 #### Landing Page
@@ -479,19 +479,19 @@ These agile methodologies ensure a flexible and iterative development process, a
 - A visually appealing layout encourages users to explore the website further.
 
 **Welcome Section** 
-![Welcome Image](images/home-welcome-section.png)
+![Welcome Image](./static/images/home-welcome-section.png)
 
 - Clear and Concise Message for users when they enter the website
 
 - Call to action for users looking to shop with direct link to store
 
 **Home Store** 
-![Home Store Image](images/home-store-section.png)
+![Home Store Image](./static/images/home-store-section.png)
 
 - Store section for users to see displayed items as they enter the website. This allows users that are looking for items to see a limited about straight away.
 
 **Home Blog** 
-![Home Blog Image](images/home-blog-section.png)
+![Home Blog Image](./static/images/home-blog-section.png)
 
 - Blog section to as users naviagte through the home page they can see another quality feature the website has. 
 
@@ -500,7 +500,7 @@ These agile methodologies ensure a flexible and iterative development process, a
 - Call to action link directing users to blog page
 
 **Home What we do** 
-![What we do Image](images/what-we-do-section.png)
+![What we do Image](./static/images/what-we-do-section.png)
 
 - What we do section for users that are interested a bit more in what Pole Haven do and what they offer. 
 
@@ -512,7 +512,7 @@ These agile methodologies ensure a flexible and iterative development process, a
 
 - Links directing to the important and main features of the website
 
-![About Page](images/about-page.png)
+![About Page](./static/images/about-page.png)
 
 
 #### Blog Page
@@ -520,7 +520,7 @@ These agile methodologies ensure a flexible and iterative development process, a
 
 - Each blog post is displayed with clear headings, publication dates, and an interactive section for user comments.
 
-![Blog Page](images/pole-blog.png)
+![Blog Page](./static/images/pole-blog.png)
 
 #### Blog Post Page
 - Individual blog post pages allow users to delve into specific topics, providing a comprehensive reading experience.
@@ -529,7 +529,7 @@ These agile methodologies ensure a flexible and iterative development process, a
 
 
 **Blog Post** 
-![Blog Post](images/blog-detail.png)
+![Blog Post](./static/images/blog-detail.png)
 
 **Blog Comment** 
 
@@ -537,22 +537,22 @@ These agile methodologies ensure a flexible and iterative development process, a
 
 - Users willbe directed to log in if the user has not logged in yet. If the user has logged it they be be presented with a box to input their content
 
-![Blog Comment](images/comments.png)
+![Blog Comment](./static/images/comments.png)
 
-![Blog Logged in Comment](images/loggedin-comment.png)
+![Blog Logged in Comment](./static/images/loggedin-comment.png)
 
 
 #### Store Page
 - The Store section showcases a variety of pole gear, including pole grips, clothing, and accessories.
 - Each item is presented individually, featuring detailed information, pricing, and visuals to aid users in making informed decisions.
 
-![Store Page](images/pole-store.png)
+![Store Page](./static/images/pole-store.png)
 
 - Users will be able to filter the category of what they want to view for easier accesibility. If there are no items within the category the user will be informed
 
-![Filter Feature](images/filter-feature.png)
+![Filter Feature](./static/images/filter-feature.png)
 
-![No items filter](images/no-category-item.png)
+![No items filter](./static/images/no-category-item.png)
 
 
 #### Store Item Page
@@ -561,7 +561,7 @@ These agile methodologies ensure a flexible and iterative development process, a
 - The streamlined layout enhances the shopping experience, allowing users to easily add items to their basket.
 
 **Item Detail Page** 
-![Item detail page](images/product-detail-view.png)
+![Item detail page](./static/images/product-detail-view.png)
 
 **Related Items section** 
 
@@ -569,36 +569,36 @@ These agile methodologies ensure a flexible and iterative development process, a
 
 - Users will be informed if there are no related products within the catergory.
 
-![Related Products](images/related-products.png)
+![Related Products](./static/images/related-products.png)
 
-![No Related Products](images/no-related-products.png)
+![No Related Products](./static/images/no-related-products.png)
 
 #### Contact Page
 - The Contact page provides a means for users to connect with Pole Haven, fostering communication and engagement.
 
 - Users can submit inquiries or feedback through a user-friendly contact form.
 
-![Contact Page](images/contact-form.png)
+![Contact Page](./static/images/contact-form.png)
 
 - Once user has submited contact form they will be displayed with a contact success form
 
-![Contact Success](images/email-success.png)
+![Contact Success](./static/images/email-success.png)
 
 #### LogIn, Logout, and Signup Page
 - User account functionalities are seamlessly integrated, allowing users to create accounts, log in, and log out.
 
 - Account creation provides users with additional accessibility features, including the ability to comment on blog posts and track order history.
 
-![Signup Page](images/signup.png)
+![Signup Page](./static/images/signup.png)
 
-![Signin Page](images/pole-haven-sign-in.png)
-![Signout Page](images/pole-haven-signout.png)
+![Signin Page](./static/images/pole-haven-sign-in.png)
+![Signout Page](./static/images/pole-haven-signout.png)
 
 
 These existing features form the foundation of Pole Haven, providing a well-rounded and user-centric experience. Each feature is designed to enhance user engagement, streamline navigation, and offer a seamless platform for both content consumption and shopping.
 
 ### Order Summary 
-![Signup Page](images/pole-haven-order-summary.png)
+![Signup Page](./static/images/pole-haven-order-summary.png)
 
 ## Future Features
 
