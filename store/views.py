@@ -10,19 +10,27 @@ from .forms import ContactForm
 # Create your views here.
 
 def item_list(request):
+    '''
+    View to dipslay approved posts limited to the three post recent posts
+    '''
     latest_blog_posts = Post.objects.filter(status=1).order_by('-created_on')[:3]
     Items = Item.objects.all()
     return render(request, "store/home.html", {"items": Items, 'latest_blog_posts': latest_blog_posts})
 
 
 def item_detail(request, slug):
-
+    '''
+    View to retrieve a single item by its slug and display the individual item on a page
+    '''
     item = get_object_or_404(Item, slug=slug)
     related_items = Item.objects.filter(category=item.category).exclude(slug=item.slug).order_by('?')[:4]
     return render(request, 'store/item_detail.html', {'item': item, 'related_items': related_items})
 
 
 def add_to_cart(request, slug):
+    '''
+    View to add store items to cart
+    '''
     item = get_object_or_404(Item, slug=slug)
     quantity = int(request.POST.get('quantity', 1))
 
@@ -57,6 +65,9 @@ def add_to_cart(request, slug):
 
 
 def remove_from_cart(request, slug):
+    '''
+    View to remove store items from cart
+    '''
     item = get_object_or_404(Item, slug=slug)
     order_qs = Order.objects.filter(user=request.user, ordered=False)
 
@@ -88,6 +99,9 @@ def remove_from_cart(request, slug):
 
 
 def order_summary(request):
+    '''
+    View to diplay summary of shopping cart such as total cost, number of items, name of items etc
+    '''
     orders = Order.objects.filter(user=request.user, ordered=False)
 
     # Calculate total order price, you can customize this based on your model structure
@@ -97,6 +111,9 @@ def order_summary(request):
 
 
 def store_view(request):
+    '''
+    View to display and filter items depending on category chosen
+    '''
     category_filter = request.GET.get('category')
     items = Item.objects.all()
 
@@ -110,6 +127,9 @@ def store_view(request):
 
 
 def contact(request):
+    '''
+    View to display contact page and form
+    '''
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -123,4 +143,7 @@ def contact(request):
 
 
 def contact_success(request):
+    '''
+    View to display success page when user has successfully sent the contact form
+    '''
     return render(request, 'store/contact_success.html')

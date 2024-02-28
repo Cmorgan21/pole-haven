@@ -80,7 +80,7 @@
             {% if messages %}
                 <ul class="messages">
                     {% for message in messages %}
-                        <div class="alert alert-info text-center" role="alert">
+                        <div class="alert {{ message.tags }} text-center" role="alert">
                             {{ message }}
                         </div>
                     {% endfor %}
